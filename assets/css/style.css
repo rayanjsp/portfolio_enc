@@ -1,0 +1,211 @@
+/* ----- 1. RESET UNIVERSEL ----- */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----- 2. VARIABLES ET STYLES GLOBAUX ----- */
+:root {
+    --couleur-fond: #FFFFFF;
+    --couleur-texte: #333333;
+    --couleur-principale: #007BFF;
+    --couleur-secondaire: #f4f4f4; /* Fond pour les sections paires */
+    --couleur-nav: #222222; /* Ton fond de nav gris foncé/noir */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+    /* On ajoute le padding ici pour que le contenu ne soit pas caché
+       SOUS le header qui est en "position: fixed" */
+    padding-top: 70px;
+}
+
+/* ----- 3. STYLES DE BASE (Mobile First) ----- */
+section {
+    padding: 60px 20px; /* Espace vertical et horizontal */
+    max-width: 1200px; /* Le contenu ne sera jamais trop large */
+    margin: 0 auto; /* Centre les sections sur les grands écrans */
+}
+
+/* On alterne la couleur de fond des sections pour mieux les voir */
+section:nth-child(even) {
+    background-color: var(--couleur-secondaire);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    color: var(--couleur-principale);
+    margin-bottom: 20px;
+}
+
+h2 { /* Titres de section */
+    text-align: center; /* Centrer les titres de section */
+    font-size: 2rem; /* Plus gros */
+    margin-bottom: 40px;
+}
+
+a {
+    color: var(--couleur-principale);
+    text-decoration: none;
+}
+
+.cta-bouton {
+    display: inline-block;
+    background-color: var(--couleur-principale);
+    color: var(--couleur-fond);
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-bouton:hover {
+    background-color: #0056b3; /* Bleu plus foncé au survol */
+}
+
+/* ----- 4. HEADER & NAVIGATION ----- */
+header {
+    background-color: var(--couleur-nav); /* Fond noir/gris foncé */
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixé en haut */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1200px; /* Largeur max, comme les sections */
+    margin: 0 auto; /* Centré */
+    padding: 10px 20px;
+
+    /* Mobile First: */
+    display: flex;
+    flex-direction: column; /* Empilé verticalement sur mobile */
+    align-items: center; /* Centré */
+}
+
+header nav a {
+    color: var(--couleur-fond); /* Texte en blanc pour être lisible */
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: var(--couleur-principale); /* Devient bleu au survol */
+    text-decoration: none;
+}
+
+/* ----- 5. STYLE DES SECTIONS (Cartes) ----- */
+
+/* C'est le conteneur pour tes projets, parcours, etc. */
+.grille-cartes {
+    display: grid;
+    /* Mobile First: Une seule colonne */
+    grid-template-columns: 1fr;
+    gap: 20px; /* Espace entre les cartes */
+}
+
+/* Style de base pour UNE carte */
+.carte {
+    background-color: var(--couleur-fond);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carte:hover {
+    transform: translateY(-5px); /* Se soulève légèrement */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Ombre plus prononcée */
+}
+
+.carte h3 {
+    margin-bottom: 10px;
+}
+
+/* ----- 6. FOOTER (Pied de page) ----- */
+footer {
+    background-color: var(--couleur-nav); /* Même couleur que le header */
+    color: var(--couleur-secondaire); /* Texte en gris clair */
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--couleur-fond); /* Liens en blanc */
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: var(--couleur-principale);
+}
+
+/* ----- 7. RESPONSIVE (Le code pour PC) ----- */
+
+/* Cette règle s'applique UNIQUEMENT si la largeur de
+  l'écran est de 768px OU PLUS (tablettes, PC).
+*/
+@media (min-width: 768px) {
+
+    /* On ajuste le padding du body pour la nav horizontale
+       qui prend moins de place en hauteur */
+    body {
+        padding-top: 60px;
+    }
+
+    /* On passe la nav en mode horizontal */
+    header nav {
+        flex-direction: row; /* On aligne les liens horizontalement */
+        justify-content: center; /* On les centre sur la ligne */
+        padding: 0 20px; /* Moins de padding vertical */
+    }
+
+    header nav a {
+        padding: 20px 15px; /* On ajuste le padding des liens */
+    }
+
+    /* On passe les cartes sur 3 colonnes */
+    .grille-cartes {
+        /* "repeat(3, 1fr)" = crée 3 colonnes de taille égale */
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Pour la section projet (qui a 3 cartes), c'est parfait.
+       Mais pour "parcours" (3 cartes) aussi.
+       Pour "compétences" (2 cartes), elles prendront 2/3 de l'espace.
+       C'est très bien comme ça.
+    */
+
+    /* On rend l'accueil plus "grand" */
+    #accueil {
+        padding: 100px 20px; /* Plus d'espace en haut/bas */
+        text-align: center;
+    }
+
+    #accueil h1 {
+        font-size: 3rem;
+    }
+}
+
+/* Ajustement pour la grille de compétences (si tu en as que 2) */
+@media (min-width: 768px) {
+    #competences .grille-cartes {
+        /* On la force sur 2 colonnes, centrées */
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 800px; /* On la rend moins large */
+        margin: 0 auto; /* On la centre */
+    }
+}
