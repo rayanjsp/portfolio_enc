@@ -344,7 +344,91 @@ footer a { margin: 0 10px; }
         grid-template-columns: repeat(4, 1fr);
     }
 }
+/* =========================================
+   11. BOUTONS ACCUEIL (Double Bouton)
+   ========================================= */
+.cta-group {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+/* Le bouton secondaire (Projets) a un style différent (bordure blanche) */
+.cta-bouton.secondaire {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.cta-bouton.secondaire:hover {
+    background-color: #fff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* =========================================
+   12. LA MODALE (La surcouche style Gmail)
+   ========================================= */
+/* Le fond sombre derrière la fenêtre */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 2000; /* Au-dessus de TOUT (même le header) */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Permet de scroller si l'écran est petit */
+    background-color: rgba(0, 0, 0, 0.8); /* Fond noir transparent */
+    backdrop-filter: blur(5px); /* Petit flou moderne */
+    animation: fadeIn 0.3s; /* Animation d'apparition */
+}
+
+/* La fenêtre elle-même */
+.modal-content {
+    background-color: var(--bg-carte);
+    margin: 5% auto; /* 5% du haut, centré horizontalement */
+    padding: 20px;
+    border: 1px solid var(--neon-color);
+    width: 90%; /* Largeur responsive */
+    max-width: 800px; /* Largeur max sur PC */
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 234, 255, 0.3);
+    text-align: center;
+    position: relative;
+}
+
+/* La croix pour fermer */
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+}
+
+.close-modal:hover {
+    color: var(--neon-color);
+}
+
+/* Le conteneur du PDF */
+.pdf-container iframe {
+    border: none;
+    background-color: #fff; /* Le PDF est blanc */
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* Animation d'ouverture */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 /* RESPONSIVE SPÉCIFIQUE TIMELINE (Mobile < 768px) */
 @media (max-width: 767px) {
     /* On enlève la ligne centrale */

@@ -27,7 +27,11 @@
         <div class="hero-content">
             <h1>Rayan CHERRAD</h1>
             <p>Étudiant en <span class="highlight">BTS SIO</span></p>
-            <a href="#projets" class="cta-bouton">Voir mes réalisations</a>
+
+            <div class="cta-group">
+                <button id="btn-cv" class="cta-bouton">Voir mon CV</button>
+                <a href="#projets" class="cta-bouton secondaire">Mes Projets</a>
+            </div>
         </div>
     </section>
 
@@ -121,7 +125,7 @@
             </article>
             <article class="carte">
                 <img src="assets/images/logos/html.png" alt="HTML/CSS" class="logo-competence">
-                <h3>Web</h3>
+                <h3>HTML5</h3>
             </article>
         </div>
     </section>
@@ -187,7 +191,25 @@
         </form>
     </section>
 </main>
+<div id="modal-cv" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
 
+        <h2>Mon Curriculum Vitae</h2>
+
+        <div class="pdf-container">
+            <iframe src="assets/documents/cv-rayan-cherrad.pdf" width="100%" height="500px">
+            </iframe>
+        </div>
+
+        <a href="assets/documents/cv-rayan-cherrad.pdf" class="cta-bouton" download>
+            📥 Télécharger le PDF
+        </a>
+    </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
 <footer>
     <div class="footer-links">
         <a href="#" target="_blank">LinkedIn</a>
