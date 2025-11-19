@@ -1,300 +1,364 @@
-/* ----- 1. RESET UNIVERSEL ----- */
+/* =========================================
+   1. CONFIGURATION & VARIABLES (Dark Mode)
+   ========================================= */
+:root {
+    /* Palette Dark Mode */
+    --bg-page: #121212;       /* Noir profond */
+    --bg-carte: #1E1E1E;      /* Gris anthracite */
+    --text-main: #E0E0E0;     /* Blanc cassé (lisible) */
+    --text-muted: #A0A0A0;    /* Gris clair pour textes secondaires */
+
+    /* La couleur NÉON (Cyan Électrique) */
+    --neon-color: #00EAFF;
+    /* Une variante plus foncée pour les survols */
+    --neon-dark: #0099AA;
+
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* =========================================
+   2. RESET & GLOBAL
+   ========================================= */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/* ----- 2. VARIABLES ET STYLES GLOBAUX ----- */
-:root {
-    --couleur-fond: #FFFFFF;
-    --couleur-texte: #333333;
-    --couleur-principale: #007BFF;
-    --couleur-secondaire: #f4f4f4; /* Fond pour les sections paires */
-    --couleur-nav: #222222; /* Ton fond de nav gris foncé/noir */
-}
-
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--couleur-fond);
-    color: var(--couleur-texte);
+    font-family: var(--font-main);
+    background-color: var(--bg-page);
+    color: var(--text-main);
     line-height: 1.6;
-    /* On ajoute le padding ici pour que le contenu ne soit pas caché
-       SOUS le header qui est en "position: fixed" */
-    padding-top: 70px;
+    padding-top: 70px; /* Pour le menu fixe */
 }
 
-/* ----- 3. STYLES DE BASE (Mobile First) ----- */
-section {
-    padding: 60px 20px; /* Espace vertical et horizontal */
-    max-width: 1200px; /* Le contenu ne sera jamais trop large */
-    margin: 0 auto; /* Centre les sections sur les grands écrans */
-}
+a { text-decoration: none; color: var(--neon-color); transition: 0.3s; }
+a:hover { color: #fff; text-shadow: 0 0 5px var(--neon-color); }
 
-/* On alterne la couleur de fond des sections pour mieux les voir */
-section:nth-child(even) {
-    background-color: var(--couleur-secondaire);
-}
+ul { list-style: none; }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* =========================================
+   3. TYPOGRAPHIE
+   ========================================= */
 h1, h2, h3 {
-    color: var(--couleur-principale);
-    margin-bottom: 20px;
+    color: #fff;
+    margin-bottom: 15px;
 }
 
-h2 { /* Titres de section */
-    text-align: center; /* Centrer les titres de section */
-    font-size: 2rem; /* Plus gros */
-    margin-bottom: 40px;
-}
-
-a {
-    color: var(--couleur-principale);
-    text-decoration: none;
-}
-
-.cta-bouton {
+h1 { font-size: 2.5rem; letter-spacing: 1px; }
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--neon-color);
     display: inline-block;
-    background-color: var(--couleur-principale);
-    color: var(--couleur-fond);
-    padding: 12px 24px;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
+    padding-bottom: 10px;
+    /* Astuce pour centrer le titre souligné */
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
 }
+h3 { color: var(--neon-color); }
 
-.cta-bouton:hover {
-    background-color: #0056b3; /* Bleu plus foncé au survol */
-}
-
-/* ----- 4. HEADER & NAVIGATION ----- */
+/* =========================================
+   4. HEADER & NAVIGATION
+   ========================================= */
 header {
-    background-color: var(--couleur-nav); /* Fond noir/gris foncé */
+    background-color: rgba(18, 18, 18, 0.95); /* Noir semi-transparent */
     width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* Fixé en haut */
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    position: fixed;
+    top: 0; left: 0; z-index: 1000;
+    border-bottom: 1px solid #333;
+    backdrop-filter: blur(5px); /* Effet de flou derrière */
 }
 
 header nav {
-    max-width: 1200px; /* Largeur max, comme les sections */
-    margin: 0 auto; /* Centré */
-    padding: 10px 20px;
-
-    /* Mobile First: */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
-    flex-direction: column; /* Empilé verticalement sur mobile */
-    align-items: center; /* Centré */
+    /* Mobile First : vertical par défaut */
+    flex-direction: column;
+    align-items: center;
 }
 
 header nav a {
-    color: var(--couleur-fond); /* Texte en blanc pour être lisible */
+    color: var(--text-main);
     font-weight: bold;
-    padding: 10px;
-    transition: color 0.3s ease;
+    padding: 15px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 header nav a:hover {
-    color: var(--couleur-principale); /* Devient bleu au survol */
-    text-decoration: none;
+    color: var(--neon-color);
+    background-color: rgba(0, 234, 255, 0.05);
 }
 
-/* ----- 5. STYLE DES SECTIONS (Cartes) ----- */
+/* =========================================
+   5. SECTIONS & CARTES (Style Néon)
+   ========================================= */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-/* C'est le conteneur pour tes projets, parcours, etc. */
-/* C'est le conteneur pour tes projets, parcours, etc. */
+/* Grille responsive */
 .grille-cartes {
     display: grid;
-    /* Mobile First: Une seule colonne */
-    grid-template-columns: 1fr;
-    gap: 20px; /* Espace entre les cartes */
+    grid-template-columns: 1fr; /* 1 colonne mobile */
+    gap: 30px;
 }
 
-
-
-/* Style de base pour UNE carte */
+/* STYLE DES CARTES (L'effet Néon est ici !) */
 .carte {
-    background-color: var(--couleur-fond);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--bg-carte);
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #333; /* Bordure discrète par défaut */
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
+/* L'effet au survol : Bordure néon + Lueur (Box Shadow) */
 .carte:hover {
-    transform: translateY(-5px); /* Se soulève légèrement */
-    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Ombre plus prononcée */
+    transform: translateY(-5px);
+    border-color: var(--neon-color);
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.2),
+    inset 0 0 10px rgba(0, 234, 255, 0.05);
 }
 
-.carte h3 {
+.carte p { color: var(--text-muted); }
+.carte h3 { margin-bottom: 10px; }
+
+/* Petit tag pour les technos dans les projets */
+.technos {
+    font-size: 0.9rem;
+    color: var(--neon-color) !important;
+    font-weight: bold;
     margin-bottom: 10px;
+    text-transform: uppercase;
 }
 
-/* ----- 6. FOOTER (Pied de page) ----- */
-footer {
-    background-color: var(--couleur-nav); /* Même couleur que le header */
-    color: var(--couleur-secondaire); /* Texte en gris clair */
+/* Logos compétences */
+.logo-competence {
+    width: 50px; height: 50px;
+    margin-bottom: 15px;
+    display: block;
+    margin-left: auto; margin-right: auto;
+}
+
+#competences .carte { text-align: center; }
+
+/* =========================================
+   6. ACCUEIL (HERO SECTION)
+   ========================================= */
+#accueil {
     text-align: center;
-    padding: 30px 20px;
-    margin-top: 40px;
+    padding: 150px 20px 100px;
+    /* Dégradé subtil en fond comme demandé */
+    background: radial-gradient(circle at center, #1a2a3a 0%, var(--bg-page) 70%);
 }
 
-footer a {
-    color: var(--couleur-fond); /* Liens en blanc */
+.highlight { color: var(--neon-color); font-weight: bold; }
+
+.cta-bouton {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 30px;
+    border: 2px solid var(--neon-color);
+    color: var(--neon-color);
     font-weight: bold;
+    border-radius: 50px;
+    text-transform: uppercase;
+    transition: 0.3s;
 }
 
-footer a:hover {
-    color: var(--couleur-principale);
+.cta-bouton:hover {
+    background-color: var(--neon-color);
+    color: #000; /* Texte noir sur fond néon */
+    box-shadow: 0 0 20px var(--neon-color);
 }
 
-/* ----- 7. RESPONSIVE (Le code pour PC) ----- */
+/* =========================================
+   7. VEILLE TECHNO (TIMELINE & DÉROULEMENT)
+   ========================================= */
 
-/* Cette règle s'applique UNIQUEMENT si la largeur de
-  l'écran est de 768px OU PLUS (tablettes, PC).
-*/
-@media (min-width: 768px) {
-
-    /* On ajuste le padding du body pour la nav horizontale
-       qui prend moins de place en hauteur */
-    body {
-        padding-top: 60px;
-    }
-
-    /* On passe la nav en mode horizontal */
-    header nav {
-        flex-direction: row; /* On aligne les liens horizontalement */
-        justify-content: center; /* On les centre sur la ligne */
-        padding: 0 20px; /* Moins de padding vertical */
-    }
-
-    header nav a {
-        padding: 20px 15px; /* On ajuste le padding des liens */
-    }
-
-    /* On passe les cartes sur 3 colonnes */
-    .grille-cartes {
-        /* "repeat(3, 1fr)" = crée 3 colonnes de taille égale */
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* Pour la section projet (qui a 3 cartes), c'est parfait.
-       Mais pour "parcours" (3 cartes) aussi.
-       Pour "compétences" (2 cartes), elles prendront 2/3 de l'espace.
-       C'est très bien comme ça.
-    */
-
-    /* On rend l'accueil plus "grand" */
-    #accueil {
-        padding: 100px 20px; /* Plus d'espace en haut/bas */
-        text-align: center;
-    }
-
-    #accueil h1 {
-        font-size: 3rem;
-    }
-}
-/* Style du formulaire */
-.form-contact {
-    max-width: 600px; /* Pas trop large */
-    margin: 0 auto;   /* Centré */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.form-groupe {
-    display: flex;
-    flex-direction: column;
-    text-align: left; /* Textes alignés à gauche */
-}
-
-input, textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-family: inherit; /* Garde la même police */
-}
-/* ----- 8. FORMULAIRE DE CONTACT ----- */
-
-form {
-    max-width: 600px; /* On limite la largeur pour que ce soit lisible */
-    margin: 0 auto;   /* On le centre */
-    display: flex;
-    flex-direction: column; /* Les champs les uns sous les autres */
-    gap: 20px; /* Espace entre les champs */
-}
-
-.form-groupe {
-    display: flex;
-    flex-direction: column;
-    text-align: left; /* On aligne les labels à gauche */
-}
-
-label {
+/* Style du "bouton" pour dérouler (summary) */
+details summary {
+    cursor: pointer;
+    padding: 20px;
+    background-color: var(--bg-carte);
+    border: 1px solid var(--neon-color);
+    border-radius: 8px;
     font-weight: bold;
+    color: var(--neon-color);
+    list-style: none; /* Enlève la flèche par défaut */
+    text-align: center;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+details summary:hover {
+    background-color: rgba(0, 234, 255, 0.1);
+    box-shadow: 0 0 10px rgba(0, 234, 255, 0.2);
+}
+
+details[open] summary {
+    margin-bottom: 40px; /* Espace quand c'est ouvert */
+    background-color: var(--neon-color);
+    color: #000;
+}
+
+/* LA TIMELINE (Le fil conducteur) */
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* La ligne verticale centrale */
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--neon-color);
+    top: 0; bottom: 0;
+    left: 50%; /* Au centre */
+    margin-left: -1px;
+    box-shadow: 0 0 10px var(--neon-color);
+}
+
+/* Les conteneurs (Gauche / Droite) */
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%; /* Prend la moitié de la largeur */
+    box-sizing: border-box;
+}
+
+/* Positionnement Gauche */
+.gauche { left: 0; text-align: right; }
+
+/* Positionnement Droite */
+.droite { left: 50%; text-align: left; }
+
+/* Le rond sur la ligne centrale */
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 16px; height: 16px;
+    background-color: var(--bg-page);
+    border: 3px solid var(--neon-color);
+    border-radius: 50%;
+    top: 25px; /* Ajuster selon la hauteur de la carte */
+    z-index: 1;
+    box-shadow: 0 0 10px var(--neon-color);
+}
+
+/* Ajustement du rond pour Gauche et Droite */
+.gauche::after { right: -8px; }
+.droite::after { left: -8px; }
+
+/* Style spécifique des cartes dans la timeline */
+.timeline-content .date {
+    font-size: 0.85rem;
+    color: var(--neon-color);
+    font-weight: bold;
+    display: block;
     margin-bottom: 5px;
-    color: var(--couleur-principale);
 }
+
+.timeline-content .source {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #888;
+}
+
+/* =========================================
+   8. FORMULAIRE DE CONTACT
+   ========================================= */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--bg-carte);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-groupe { margin-bottom: 20px; text-align: left; }
+
+label { display: block; margin-bottom: 8px; color: var(--neon-color); }
 
 input, textarea {
+    width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    background-color: #2A2A2A; /* Fond des inputs plus clair que la carte */
+    border: 1px solid #444;
+    color: #fff;
     border-radius: 5px;
-    font-size: 1rem;
-    font-family: inherit; /* Garde la même police que le reste */
 }
 
-/* Petit effet quand on clique dans un champ */
 input:focus, textarea:focus {
     outline: none;
-    border-color: var(--couleur-principale);
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+    border-color: var(--neon-color);
+    box-shadow: 0 0 8px rgba(0, 234, 255, 0.3);
 }
 
-/* On élargit le bouton envoyer pour qu'il prenne toute la largeur sur mobile */
-form .cta-bouton {
-    width: 100%;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
+/* =========================================
+   9. FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid #333;
+    color: #666;
+    font-size: 0.9rem;
 }
-/* ----- 9. STYLE SPÉCIFIQUE COMPÉTENCES ----- */
+footer a { margin: 0 10px; }
 
-/* Pour centrer le contenu des cartes compétences */
-#competences .carte {
-    text-align: center; /* Centre le texte et l'image */
-    display: flex;
-    flex-direction: column; /* Empile l'image, le titre et le texte */
-    align-items: center; /* Centre horizontalement */
-}
-
-/* Style des logos */
-.logo-competence {
-    width: 60px;  /* Largeur fixe : ni trop gros, ni trop petit */
-    height: 60px; /* Hauteur fixe */
-    object-fit: contain; /* L'image ne sera pas déformée/coupée */
-    margin-bottom: 15px; /* Espace entre l'image et le titre */
-}
-
-/* Ajustement pour la grille de compétences (si tu en as que 2) */
+/* =========================================
+   10. RESPONSIVE (Media Queries)
+   ========================================= */
 @media (min-width: 768px) {
-    #competences .grille-cartes {
-        /* On la force sur 2 colonnes, centrées */
-        grid-template-columns: repeat(2, 1fr);
-        max-width: 800px; /* On la rend moins large */
-        margin: 0 auto; /* On la centre */
+    /* Menu horizontal sur PC */
+    header nav {
+        flex-direction: row;
+        justify-content: center;
     }
+
+    /* Grille 3 colonnes sur PC */
     .grille-cartes {
-        /* "repeat(3, 1fr)" = crée 3 colonnes de taille égale */
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Exception pour compétences (4 col si possible, sinon 2 c'est bien aussi) */
+    #competences .grille-cartes {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* RESPONSIVE SPÉCIFIQUE TIMELINE (Mobile < 768px) */
+@media (max-width: 767px) {
+    /* On enlève la ligne centrale */
+    .timeline::after { left: 31px; }
+
+    /* Tous les items prennent 100% de large */
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+
+    /* Tout le monde s'aligne à gauche */
+    .timeline-item.droite { left: 0%; }
+    .gauche { text-align: left; }
+
+    /* On aligne les ronds à gauche */
+    .gauche::after, .droite::after {
+        left: 23px; /* Alignement sur la ligne déplacée */
     }
 }

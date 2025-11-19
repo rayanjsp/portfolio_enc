@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="assets/css/style.css">
-
     <title>Portfolio Rayan CHERRAD - BTS SIO</title>
 </head>
 
@@ -14,150 +12,179 @@
 <header>
     <nav>
         <a href="#accueil">Accueil</a>
-        <a href="#a-propos">À Propos de moi</a>
-        <a href="#parcours">Mon Parcours</a>
-        <a href="#projets">Mes Projets</a>
+        <a href="#a-propos">À Propos</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#projets">Projets</a>
         <a href="#certifications">Certifications</a>
         <a href="#competences">Compétences</a>
-        <a href="#veille">Veille Techno</a>
+        <a href="#veille">Veille</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <main>
     <section id="accueil">
-        <h1>Rayan CHERRAD</h1>
-        <p>Bienvenue sur mon portfolio d'étudiant en BTS SIO.</p>
-        <a href="#projets" class="cta-bouton">Découvrir mes projets</a>
+        <div class="hero-content">
+            <h1>Rayan CHERRAD</h1>
+            <p>Étudiant en <span class="highlight">BTS SIO</span></p>
+            <a href="#projets" class="cta-bouton">Voir mes réalisations</a>
+        </div>
     </section>
 
     <section id="a-propos">
         <h2>À propos de moi</h2>
-        <p>
-            Étudiant en BTS SIO option SLAM à l'École Nationale de Commerce Paris.
-            Passionné par l'informatique depuis toujours, j'en ai fait ma vocation.
-        </p>
-        <h3>Mes atouts</h3>
-        <p>Curieux, persévérant et toujours prêt à apprendre de nouvelles technologies.</p>
+        <div class="contenu-texte">
+            <p>
+                Étudiant en BTS SIO option SLAM à l'École Nationale de Commerce Paris.
+                Passionné par le développement, j'aime construire des solutions modernes et efficaces.
+            </p>
+            <h3>Mes atouts</h3>
+            <p>Curiosité technique • Rigueur • Esprit d'équipe • Adaptation rapide</p>
+        </div>
     </section>
 
     <section id="parcours">
         <h2>Mon Parcours</h2>
         <div class="grille-cartes">
-
             <article class="carte">
                 <h3>BAC Général</h3>
-                <p>Option Mathématiques et NSI.</p>
+                <p>Option Mathématiques et NSI.<br>Mention Bien.</p>
             </article>
-
             <article class="carte">
                 <h3>BUT GEII</h3>
-                <p>Première année non terminée (réorientation vers le logiciel).</p>
+                <p>Première année (IUT Ville d'avray).<br>Découverte de l'électronique et de l'informatique industrielle'.</p>
             </article>
-
             <article class="carte">
                 <h3>BTS SIO (SLAM)</h3>
-                <p>En cours. Solutions Logicielles et Applications Métiers.</p>
+                <p>ENC Bessières (Paris).<br>Spécialisation en Solutions Logicielles et Applications Métiers.</p>
             </article>
-
         </div>
     </section>
 
     <section id="projets">
         <h2>Mes Projets</h2>
         <div class="grille-cartes">
-
             <article class="carte">
-                <h3>Site E-commerce (PHP)</h3>
-                <p>Création d'un site de vente avec panier et gestion admin.</p>
+                <h3>AIQuizMaker</h3>
+                <p class="technos">PHP • MySQL</p>
+                <p>Développement complet d'un site de vente avec Back-Office administrateur.</p>
             </article>
-
             <article class="carte">
-                <h3>Application Java</h3>
-                <p>Logiciel de gestion de stocks pour une association.</p>
+                <h3>Application Lourde</h3>
+                <p class="technos">Java • Swing</p>
+                <p>Gestion de stock pour une association caritative avec export PDF.</p>
             </article>
-
             <article class="carte">
-                <h3>Portfolio Personnel</h3>
-                <p>Site vitrine responsive en HTML/CSS pur.</p>
+                <h3>Portfolio</h3>
+                <p class="technos">HTML • CSS</p>
+                <p>Site vitrine responsive conçu en Mobile First sans framework.</p>
             </article>
+        </div>
+    </section>
 
+    <section id="certifications">
+        <h2>Certifications</h2>
+        <div class="grille-cartes">
+            <article class="carte">
+                <h3>SecNumAcadémie</h3>
+                <p>ANSSI</p>
+                <p>Validation des modules de sensibilisation à la cybersécurité.</p>
+            </article>
+            <article class="carte">
+                <h3>Ateliers Google</h3>
+                <p>Google Garage</p>
+                <p>Les principes fondamentaux du marketing numérique.</p>
+            </article>
         </div>
     </section>
 
     <section id="competences">
         <h2>Mes Compétences</h2>
         <div class="grille-cartes">
-
             <article class="carte">
-                <img src="assets/images/logos/python.png" alt="Logo Python" class="logo-competence">
+                <img src="assets/images/logos/python.png" alt="Python" class="logo-competence">
                 <h3>Python</h3>
-                <p>Scripting, Algo, Manipulation de données.</p>
             </article>
-
             <article class="carte">
-                <img src="assets/images/logos/java.png" alt="Logo Java" class="logo-competence">
+                <img src="assets/images/logos/java.png" alt="Java" class="logo-competence">
                 <h3>Java</h3>
-                <p>Programmation Orientée Objet, Applications lourdes.</p>
             </article>
-
             <article class="carte">
-                <img src="assets/images/logos/html.png" alt="Logo Web" class="logo-competence">
-                <h3>HTML / CSS</h3>
-                <p>Création d'interfaces responsive (comme ce site !).</p>
+                <img src="assets/images/logos/html.png" alt="HTML/CSS" class="logo-competence">
+                <h3>Web</h3>
             </article>
-
         </div>
-    </section>
-
-    <section id="competences">
-        <h2>Mes Compétences</h2>
-        <article class="carte-competences">
-            <h3>Compétence 1</h3>
-            <p>Description Compétence 1</p>
-        </article>
-        <article class="carte-competences">
-            <h3>Compétence 2</h3>
-            <p>Description Compétence 2</p>
-        </article>
     </section>
 
     <section id="veille">
         <h2>Ma Veille Technologique</h2>
+
+        <details>
+            <summary>Sujet : L'impact de l'Intelligence Artificielle sur le développement web</summary>
+
+            <div class="timeline">
+
+                <div class="timeline-item gauche">
+                    <div class="timeline-content carte">
+                        <span class="date">15 Sept. 2024</span>
+                        <h3>L'arrivée de Devin AI</h3>
+                        <p>Premier ingénieur logiciel IA autonome.</p>
+                        <p class="source"><i>Source : Blog du Modérateur</i></p>
+                        <a href="#" target="_blank">Lire l'article</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item droite">
+                    <div class="timeline-content carte">
+                        <span class="date">02 Oct. 2024</span>
+                        <h3>GitHub Copilot Workspace</h3>
+                        <p>L'évolution des assistants de code vers des environnements complets.</p>
+                        <p class="source"><i>Source : TechCrunch</i></p>
+                        <a href="#" target="_blank">Lire l'article</a>
+                    </div>
+                </div>
+
+                <div class="timeline-item gauche">
+                    <div class="timeline-content carte">
+                        <span class="date">10 Nov. 2024</span>
+                        <h3>L'IA va-t-elle remplacer les juniors ?</h3>
+                        <p>Analyse sur l'évolution du métier de développeur.</p>
+                        <p class="source"><i>Source : Human Coders</i></p>
+                        <a href="#" target="_blank">Lire l'article</a>
+                    </div>
+                </div>
+
+            </div>
+        </details>
     </section>
 
     <section id="contact">
-        <h2>Contactez-moi</h2>
+        <h2>Me Contacter</h2>
         <form action="#" method="post" class="form-contact">
             <div class="form-groupe">
                 <label for="nom">Nom & Prénom</label>
                 <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
             </div>
-
             <div class="form-groupe">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" placeholder="votre@email.com" required>
             </div>
-
             <div class="form-groupe">
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Bonjour Rayan, je vous contacte pour..." required></textarea>
+                <textarea id="message" name="message" rows="5" placeholder="Bonjour..." required></textarea>
             </div>
-
-            <button type="submit" class="cta-bouton">Envoyer le message</button>
+            <button type="submit" class="cta-bouton">Envoyer</button>
         </form>
     </section>
 </main>
 
 <footer>
-    <p>
-        <a href="URL_LINKEDIN" target="_blank">LinkedIn</a> |
-        <a href="URL_GITHUB" target="_blank">GitHub</a>
-    </p>
-    <p>&copy; 2025 Rayan CHERRAD</p>
+    <div class="footer-links">
+        <a href="#" target="_blank">LinkedIn</a>
+        <a href="#" target="_blank">GitHub</a>
+    </div>
+    <p>&copy; 2025 Rayan CHERRAD - BTS SIO</p>
 </footer>
-
-<script src="assets/js/main.js"></script>
 
 </body>
 </html>
