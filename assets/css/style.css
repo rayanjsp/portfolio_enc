@@ -109,12 +109,15 @@ header nav a:hover {
 /* ----- 5. STYLE DES SECTIONS (Cartes) ----- */
 
 /* C'est le conteneur pour tes projets, parcours, etc. */
+/* C'est le conteneur pour tes projets, parcours, etc. */
 .grille-cartes {
     display: grid;
     /* Mobile First: Une seule colonne */
     grid-template-columns: 1fr;
     gap: 20px; /* Espace entre les cartes */
 }
+
+
 
 /* Style de base pour UNE carte */
 .carte {
@@ -199,6 +202,88 @@ footer a:hover {
         font-size: 3rem;
     }
 }
+/* Style du formulaire */
+.form-contact {
+    max-width: 600px; /* Pas trop large */
+    margin: 0 auto;   /* Centré */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-groupe {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* Textes alignés à gauche */
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit; /* Garde la même police */
+}
+/* ----- 8. FORMULAIRE DE CONTACT ----- */
+
+form {
+    max-width: 600px; /* On limite la largeur pour que ce soit lisible */
+    margin: 0 auto;   /* On le centre */
+    display: flex;
+    flex-direction: column; /* Les champs les uns sous les autres */
+    gap: 20px; /* Espace entre les champs */
+}
+
+.form-groupe {
+    display: flex;
+    flex-direction: column;
+    text-align: left; /* On aligne les labels à gauche */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--couleur-principale);
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit; /* Garde la même police que le reste */
+}
+
+/* Petit effet quand on clique dans un champ */
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--couleur-principale);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* On élargit le bouton envoyer pour qu'il prenne toute la largeur sur mobile */
+form .cta-bouton {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+/* ----- 9. STYLE SPÉCIFIQUE COMPÉTENCES ----- */
+
+/* Pour centrer le contenu des cartes compétences */
+#competences .carte {
+    text-align: center; /* Centre le texte et l'image */
+    display: flex;
+    flex-direction: column; /* Empile l'image, le titre et le texte */
+    align-items: center; /* Centre horizontalement */
+}
+
+/* Style des logos */
+.logo-competence {
+    width: 60px;  /* Largeur fixe : ni trop gros, ni trop petit */
+    height: 60px; /* Hauteur fixe */
+    object-fit: contain; /* L'image ne sera pas déformée/coupée */
+    margin-bottom: 15px; /* Espace entre l'image et le titre */
+}
 
 /* Ajustement pour la grille de compétences (si tu en as que 2) */
 @media (min-width: 768px) {
@@ -207,5 +292,9 @@ footer a:hover {
         grid-template-columns: repeat(2, 1fr);
         max-width: 800px; /* On la rend moins large */
         margin: 0 auto; /* On la centre */
+    }
+    .grille-cartes {
+        /* "repeat(3, 1fr)" = crée 3 colonnes de taille égale */
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -43,34 +43,71 @@
 
     <section id="parcours">
         <h2>Mon Parcours</h2>
-        <article class="carte-parcours">
-            <h3>BAC</h3>
-            <p>Titulaire d'un baccalauréat général option Mathématiques et NSI.</p>
-        </article>
-        <article class="carte-parcours">
-            <h3>BUT GEII</h3>
-            <p>Première année non terminée, car trop éloignée du développement logiciel.</p>
-        </article>
-        <article class="carte-parcours">
-            <h3>BTS SIO</h3>
-            <p>Option SLAM (Solutions Logicielles et Applications Métiers) suite à ma réorientation.</p>
-        </article>
+        <div class="grille-cartes">
+
+            <article class="carte">
+                <h3>BAC Général</h3>
+                <p>Option Mathématiques et NSI.</p>
+            </article>
+
+            <article class="carte">
+                <h3>BUT GEII</h3>
+                <p>Première année non terminée (réorientation vers le logiciel).</p>
+            </article>
+
+            <article class="carte">
+                <h3>BTS SIO (SLAM)</h3>
+                <p>En cours. Solutions Logicielles et Applications Métiers.</p>
+            </article>
+
+        </div>
     </section>
 
     <section id="projets">
         <h2>Mes Projets</h2>
-        <article class="carte-projet">
-            <h3>Titre du Projet 1</h3>
-            <p>Description...</p>
-        </article>
-        <article class="carte-projet">
-            <h3>Titre du Projet 2</h3>
-            <p>Description...</p>
-        </article>
+        <div class="grille-cartes">
+
+            <article class="carte">
+                <h3>Site E-commerce (PHP)</h3>
+                <p>Création d'un site de vente avec panier et gestion admin.</p>
+            </article>
+
+            <article class="carte">
+                <h3>Application Java</h3>
+                <p>Logiciel de gestion de stocks pour une association.</p>
+            </article>
+
+            <article class="carte">
+                <h3>Portfolio Personnel</h3>
+                <p>Site vitrine responsive en HTML/CSS pur.</p>
+            </article>
+
+        </div>
     </section>
 
-    <section id="certifications">
-        <h2>Certifications</h2>
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="grille-cartes">
+
+            <article class="carte">
+                <img src="assets/images/logos/python.png" alt="Logo Python" class="logo-competence">
+                <h3>Python</h3>
+                <p>Scripting, Algo, Manipulation de données.</p>
+            </article>
+
+            <article class="carte">
+                <img src="assets/images/logos/java.png" alt="Logo Java" class="logo-competence">
+                <h3>Java</h3>
+                <p>Programmation Orientée Objet, Applications lourdes.</p>
+            </article>
+
+            <article class="carte">
+                <img src="assets/images/logos/html-css.png" alt="Logo Web" class="logo-competence">
+                <h3>HTML / CSS</h3>
+                <p>Création d'interfaces responsive (comme ce site !).</p>
+            </article>
+
+        </div>
     </section>
 
     <section id="competences">
@@ -91,7 +128,23 @@
 
     <section id="contact">
         <h2>Contactez-moi</h2>
-        <form>
+        <form action="#" method="post" class="form-contact">
+            <div class="form-groupe">
+                <label for="nom">Nom & Prénom</label>
+                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+
+            <div class="form-groupe">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+
+            <div class="form-groupe">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Bonjour Rayan, je vous contacte pour..." required></textarea>
+            </div>
+
+            <button type="submit" class="cta-bouton">Envoyer le message</button>
         </form>
     </section>
 </main>
