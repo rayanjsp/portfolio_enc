@@ -1,222 +1,304 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Portfolio Rayan CHERRAD - BTS SIO</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="description" content="Portfolio de Rayan CHERRAD — Développeur web & IA, étudiant BTS SIO SLAM à l'ENC Bessières Paris. Spécialisé en Laravel, JavaScript et Node.js. Disponible pour un stage.">
+  <title>Rayan CHERRAD — Développeur Web & IA · Paris</title>
 </head>
-
 <body>
 
-<header>
+<!-- ━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#hero" class="nav-logo">RC<span class="nav-dot">.</span></a>
     <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#a-propos">À Propos</a>
-        <a href="#parcours">Parcours</a>
-        <a href="#projets">Projets</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#competences">Compétences</a>
-        <a href="#veille">Veille</a>
-        <a href="#contact">Contact</a>
+      <a href="#projets">Projets</a>
+      <a href="#apropos">Profil</a>
+      <a href="#parcours">Parcours</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <button class="nav-btn" id="btn-cv">Voir le CV</button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
-<main>
-    <section id="accueil">
-        <div class="hero-content">
-            <h1>Rayan CHERRAD</h1>
-            <p>Étudiant en <span class="highlight">BTS SIO</span></p>
-
-            <div class="cta-group">
-                <button id="btn-cv" class="cta-bouton">Voir mon CV</button>
-                <a href="#projets" class="cta-bouton secondaire">Mes Projets</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="a-propos">
-        <h2>À propos de moi</h2>
-        <div class="contenu-texte">
-            <p>
-                Étudiant en BTS SIO option SLAM à l'École Nationale de Commerce Paris.
-                Passionné par le développement, j'aime construire des solutions modernes et efficaces.
-            </p>
-            <h3>Mes atouts</h3>
-            <p>Curiosité technique • Rigueur • Esprit d'équipe • Adaptation rapide</p>
-        </div>
-    </section>
-
-    <section id="parcours">
-        <h2>Mon Parcours</h2>
-        <div class="grille-cartes">
-            <article class="carte">
-                <h3>BAC Général</h3>
-                <p>Option Mathématiques et NSI.<br>Mention Bien.</p>
-            </article>
-            <article class="carte">
-                <h3>BUT GEII</h3>
-                <p>Première année (IUT Ville d'avray).<br>Découverte de l'électronique et de l'informatique industrielle'.</p>
-            </article>
-            <article class="carte">
-                <h3>BTS SIO (SLAM)</h3>
-                <p>ENC Bessières (Paris).<br>Spécialisation en Solutions Logicielles et Applications Métiers.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="projets">
-        <h2>Mes Projets</h2>
-        <div class="grille-cartes">
-            <article class="carte">
-                <h3>AIQuizMaker</h3>
-                <p class="technos">laraval • html • css • nodejs • MySQL</p>
-                <p>Développement complet d'un site de génération de quizz via l'IA.</p>
-            </article>
-            <article class="carte">
-                <h3>SmartRewriter</h3>
-                <p class="technos">HTML • CSS • JavaScript • NodeJS</p>
-                <p>Extension chrome qui permet d'écire ses mails via l'IA sans quitter sa page</p>
-            </article>
-            <article class="carte">
-                <h3>Portfolio</h3>
-                <p class="technos">HTML • CSS • Javascript</p>
-                <p>Site vitrine responsive.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="certifications">
-        <h2>Certifications</h2>
-        <div class="grille-cartes">
-            <article class="carte">
-                <h3>SecNumAcadémie</h3>
-                <b><p>ANSSI</p></b>
-                <p>Validation des modules de sensibilisation à la cybersécurité.</p>
-            </article>
-            <article class="carte">
-                <h3>Responsive Web Design Certification</h3>
-                <b><p>FreeCodeCamp</p></b>
-                <p>Cursus pratique pour apprendre à coder des sites web responsive en maîtrisant le HTML et le CSS.</p>
-            </article>
-            <article class="carte">
-                <h3>Python Certification</h3>
-                <b><p>FreeCodeCamp</p></b>
-                <p>Formation axée sur la logique pure et l'algorithmique pour maîtriser les bases du langage Python et la manipulation de données.</p>
-            </article>
-            <article class="carte">
-                <h3>PIX</h3>
-                <b><p>PIX</p></b>
-                <p>Les principes fondamentaux de l'informatique.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="competences">
-        <h2>Mes Compétences</h2>
-        <div class="grille-cartes">
-            <article class="carte">
-                <img src="assets/images/logos/python.png" alt="Python" class="logo-competence">
-                <h3>Python</h3>
-            </article>
-            <article class="carte">
-                <img src="assets/images/logos/java.png" alt="Java" class="logo-competence">
-                <h3>Java</h3>
-            </article>
-            <article class="carte">
-                <img src="assets/images/logos/html.png" alt="HTML/CSS" class="logo-competence">
-                <h3>HTML5</h3>
-            </article>
-        </div>
-    </section>
-
-    <section id="veille">
-        <h2>Ma Veille Technologique</h2>
-
-        <details>
-            <summary>Sujet : L'impact de l'Intelligence Artificielle sur le développement web</summary>
-
-            <div class="timeline">
-
-                <div class="timeline-item gauche">
-                    <div class="timeline-content carte">
-                        <span class="date">15 Sept. 2024</span>
-                        <h3>L'arrivée de Devin AI</h3>
-                        <p>Premier ingénieur logiciel IA autonome.</p>
-                        <p class="source"><i>Source : Blog du Modérateur</i></p>
-                        <a href="#" target="_blank">Lire l'article</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item droite">
-                    <div class="timeline-content carte">
-                        <span class="date">02 Oct. 2024</span>
-                        <h3>GitHub Copilot Workspace</h3>
-                        <p>L'évolution des assistants de code vers des environnements complets.</p>
-                        <p class="source"><i>Source : TechCrunch</i></p>
-                        <a href="#" target="_blank">Lire l'article</a>
-                    </div>
-                </div>
-
-                <div class="timeline-item gauche">
-                    <div class="timeline-content carte">
-                        <span class="date">10 Nov. 2024</span>
-                        <h3>L'IA va-t-elle remplacer les juniors ?</h3>
-                        <p>Analyse sur l'évolution du métier de développeur.</p>
-                        <p class="source"><i>Source : Human Coders</i></p>
-                        <a href="#" target="_blank">Lire l'article</a>
-                    </div>
-                </div>
-
-            </div>
-        </details>
-    </section>
-
-    <section id="contact">
-        <h2>Me Contacter</h2>
-        <form action="#" method="post" class="form-contact">
-            <div class="form-groupe">
-                <label for="nom">Nom & Prénom</label>
-                <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
-            </div>
-            <div class="form-groupe">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-            </div>
-            <div class="form-groupe">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Bonjour..." required></textarea>
-            </div>
-            <button type="submit" class="cta-bouton">Envoyer</button>
-        </form>
-    </section>
-</main>
-<div id="modal-cv" class="modal">
-    <div class="modal-content">
-        <span class="close-modal">&times;</span>
-
-        <h2>Mon Curriculum Vitae</h2>
-
-        <div class="pdf-container">
-            <iframe src="assets/documents/cv-rayan-cherrad.pdf" width="100%" height="500px">
-            </iframe>
-        </div>
-
-        <a href="assets/documents/cv-rayan-cherrad.pdf" class="cta-bouton" download>
-            📥 Télécharger le PDF
-        </a>
+<!-- ━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="hero" class="hero">
+  <div class="hero-in">
+    <p class="chip">BTS SIO SLAM · ENC Bessières · Paris</p>
+    <h1>
+      <span class="h-sub">Rayan</span>
+      <span class="h-main">CHERRAD</span>
+    </h1>
+    <p class="hero-desc">Développeur web & IA en formation BTS SIO SLAM. Je conçois des applications avec Laravel, JavaScript et Node.js — des outils qui résolvent de vrais problèmes.</p>
+    <div class="hero-btns">
+      <a href="#projets" class="btn-fill">Voir mes projets</a>
+      <a href="#contact" class="btn-outline">Me contacter</a>
     </div>
+  </div>
+  <div class="hero-nums">
+    <div class="hnum"><b>3</b><span>Projets</span></div>
+    <div class="hnum"><b>4</b><span>Certifications</span></div>
+    <div class="hnum"><b>2+</b><span>Ans en IT</span></div>
+  </div>
+  <div class="hero-blob" aria-hidden="true"></div>
+</section>
+
+<!-- ━━ PROJETS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="projets" class="sec sec-light">
+  <div class="sec-in">
+    <div class="sec-head fade-up">
+      <span class="tag-label">02 — Projets</span>
+      <h2>Ce que j'ai construit</h2>
+    </div>
+    <div class="cards">
+
+      <article class="card fade-up">
+        <div class="card-gfx">
+          <span class="card-n">01</span>
+        </div>
+        <div class="card-body">
+          <h3>AIQuizMaker</h3>
+          <p>Génération automatique de quiz par IA. L'utilisateur entre un sujet, l'IA construit les questions, gère les scores et propose des révisions adaptées.</p>
+          <div class="tags">
+            <span>Laravel</span><span>NodeJS</span><span>MySQL</span><span>HTML/CSS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <div class="card-gfx card-gfx--b">
+          <span class="card-n">02</span>
+        </div>
+        <div class="card-body">
+          <h3>SmartRewriter</h3>
+          <p>Extension Chrome avec IA intégrée pour reformuler et améliorer ses emails directement dans le navigateur, sans changer de page.</p>
+          <div class="tags">
+            <span>JavaScript</span><span>NodeJS</span><span>HTML/CSS</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <div class="card-gfx card-gfx--c">
+          <span class="card-n">03</span>
+        </div>
+        <div class="card-body">
+          <h3>Portfolio</h3>
+          <p>Ce site — conçu et développé from scratch. Design system cohérent, responsive, animations au scroll.</p>
+          <div class="tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="card-link">GitHub →</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ━━ PROFIL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="apropos" class="sec sec-dark">
+  <div class="sec-in">
+    <div class="about-grid">
+      <div class="about-l fade-up">
+        <span class="tag-label tag-label--light">03 — Profil</span>
+        <h2>Qui suis-je ?</h2>
+        <p>Étudiant en BTS SIO SLAM à l'ENC Bessières (Paris). Après un passage par le BUT GEII, j'ai trouvé ma voie dans le développement logiciel.</p>
+        <p>Ce qui me définit&nbsp;: la curiosité technique, l'envie de construire des choses utiles, et la rigueur dans l'exécution.</p>
+        <div class="pills">
+          <span>Curiosité technique</span>
+          <span>Rigueur</span>
+          <span>Esprit d'équipe</span>
+          <span>Adaptabilité</span>
+        </div>
+      </div>
+      <div class="about-r fade-up">
+        <span class="tag-label tag-label--light">Compétences</span>
+        <div class="skills">
+          <div class="skill-item">
+            <img src="assets/images/logos/python.png" alt="Python">
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/logos/java.png" alt="Java">
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <img src="assets/images/logos/html.png" alt="HTML / CSS">
+            <span>HTML / CSS</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-ico">JS</span>
+            <span>JavaScript</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-ico">Lv</span>
+            <span>Laravel</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-ico">No</span>
+            <span>Node.js</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-ico">SQL</span>
+            <span>MySQL</span>
+          </div>
+          <div class="skill-item">
+            <span class="skill-ico">Git</span>
+            <span>Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ PARCOURS + CERTIFS ━━━━━━━━━━━━━━━━━━━━ -->
+<section id="parcours" class="sec sec-light">
+  <div class="sec-in">
+    <div class="sec-head fade-up">
+      <span class="tag-label">04 — Parcours & Certifications</span>
+      <h2>Formation</h2>
+    </div>
+    <div class="two-col">
+      <div class="fade-up">
+        <h3 class="col-title">Académique</h3>
+        <ol class="timeline">
+          <li>
+            <span class="tl-yr">2021–2024</span>
+            <div>
+              <strong>BAC Général</strong>
+              <p>Maths & NSI — Mention Bien</p>
+            </div>
+          </li>
+          <li>
+            <span class="tl-yr">2024</span>
+            <div>
+              <strong>BUT GEII</strong>
+              <p>IUT Ville-d'Avray — électronique & info industrielle</p>
+            </div>
+          </li>
+          <li class="tl-active">
+            <span class="tl-yr">2024–2026</span>
+            <div>
+              <strong>BTS SIO — SLAM <em class="now">En cours</em></strong>
+              <p>ENC Bessières, Paris</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+      <div class="fade-up">
+        <h3 class="col-title">Certifications</h3>
+        <ul class="cert-list">
+          <li><b>SecNumAcadémie</b><span>ANSSI · Cybersécurité</span></li>
+          <li><b>Responsive Web Design</b><span>freeCodeCamp · HTML/CSS</span></li>
+          <li><b>Python Certification</b><span>freeCodeCamp · Algorithmique</span></li>
+          <li><b>PIX</b><span>PIX · Compétences numériques</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ VEILLE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section class="sec sec-tint">
+  <div class="sec-in">
+    <div class="sec-head fade-up">
+      <span class="tag-label">05 — Veille</span>
+      <h2>L'IA dans le développement web</h2>
+    </div>
+    <div class="veille-row">
+      <article class="veille-card fade-up">
+        <span class="v-date">15 sept. 2024</span>
+        <h3>L'arrivée de Devin AI</h3>
+        <p>Premier ingénieur IA autonome capable de coder, tester et déployer seul. Un signal fort : l'IA ne remplace pas encore le développeur, mais redéfinit ce qu'on attend de lui.</p>
+        <footer>Blog du Modérateur &nbsp;·&nbsp; <a href="https://www.blogdumoderateur.com" target="_blank" rel="noopener">Lire →</a></footer>
+      </article>
+      <article class="veille-card fade-up">
+        <span class="v-date">02 oct. 2024</span>
+        <h3>GitHub Copilot Workspace</h3>
+        <p>Les assistants IA évoluent en environnements de développement complets. J'utilise Copilot au quotidien — la différence de vélocité est réelle, surtout sur les tâches répétitives.</p>
+        <footer>TechCrunch &nbsp;·&nbsp; <a href="https://techcrunch.com" target="_blank" rel="noopener">Lire →</a></footer>
+      </article>
+      <article class="veille-card fade-up">
+        <span class="v-date">10 nov. 2024</span>
+        <h3>L'IA va-t-elle remplacer les juniors ?</h3>
+        <p>Analyse sur la place des développeurs débutants face à l'IA. Mon point de vue : ceux qui savent utiliser l'IA comme outil auront un avantage décisif sur ceux qui la subissent.</p>
+        <footer>Human Coders &nbsp;·&nbsp; <a href="https://humancoders.com" target="_blank" rel="noopener">Lire →</a></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<section id="contact" class="sec sec-dark">
+  <div class="sec-in">
+    <div class="contact-wrap">
+      <div class="contact-l fade-up">
+        <span class="tag-label tag-label--light">06 — Contact</span>
+        <h2>Travaillons<br>ensemble.</h2>
+        <p>Stage, projet, ou simple échange — je suis disponible.</p>
+        <div class="contact-socials">
+          <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/rayanjsp" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <form class="contact-form fade-up" id="contact-form" novalidate>
+        <div class="cf-row">
+          <div class="cf-field">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+          </div>
+          <div class="cf-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          </div>
+        </div>
+        <div class="cf-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Bonjour Rayan..." required></textarea>
+        </div>
+        <button type="submit" class="btn-fill">Envoyer →</button>
+        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<footer class="footer">
+  <div class="footer-in">
+    <span>© 2025 Rayan CHERRAD</span>
+    <div><a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/rayanjsp" target="_blank" rel="noopener">GitHub</a></div>
+  </div>
+</footer>
+
+<!-- ━━ MODAL CV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+<div id="modal-cv" class="modal">
+  <div class="modal-box">
+    <button class="modal-x" id="modal-close">&times;</button>
+    <h2>Curriculum Vitae</h2>
+    <iframe src="assets/documents/cv-rayan-cherrad.pdf" width="100%" height="480px" title="CV"></iframe>
+    <a href="assets/documents/cv-rayan-cherrad.pdf" class="btn-fill" download style="margin-top:1rem;display:inline-block">Télécharger →</a>
+  </div>
 </div>
 
 <script src="assets/js/main.js"></script>
-</body>
-<footer>
-    <div class="footer-links">
-        <a href="#" target="_blank">LinkedIn</a>
-        <a href="#" target="_blank">GitHub</a>
-    </div>
-    <p>&copy; 2025 Rayan CHERRAD - BTS SIO</p>
-</footer>
-
 </body>
 </html>
