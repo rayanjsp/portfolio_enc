@@ -1,471 +1,530 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800;900&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <meta name="description" content="Portfolio de Rayan CHERRAD — Développeur web, étudiant BTS SIO SLAM à l'ENC Bessières Paris. Spécialisé en Vue.js, Node.js et PHP. Disponible pour une alternance.">
+  <meta name="description"
+    content="Portfolio de Rayan CHERRAD — Développeur web, étudiant BTS SIO SLAM à l'ENC Bessières Paris. Spécialisé en Vue.js, Node.js et PHP. Disponible pour une alternance.">
   <title>Rayan CHERRAD — Développeur Web · Paris</title>
 </head>
+
 <body>
 
-<!-- Dynamic Ambient Glow Background -->
-<div class="ambient-glow" aria-hidden="true">
-  <div class="glow-blob glow-1"></div>
-  <div class="glow-blob glow-2"></div>
-  <div class="glow-blob glow-3"></div>
-</div>
-
-<!-- ━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<header class="nav" id="nav">
-  <div class="nav-in">
-    <a href="#hero" class="nav-logo">RC<span class="nav-dot">.</span></a>
-    <nav id="nav-menu">
-      <a href="#profil">Profil</a>
-      <a href="#competences">Compétences</a>
-      <a href="#projets">Projets</a>
-      <a href="#experiences">Expériences</a>
-      <a href="#parcours">Parcours</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="nav-actions">
-      <a href="https://github.com/rayanjsp" class="nav-icon-link" target="_blank" rel="noopener" aria-label="GitHub">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.51 11.51 0 0112 5.8c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
-      </a>
-      <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" class="nav-icon-link" target="_blank" rel="noopener" aria-label="LinkedIn">
-        <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-      </a>
-      <!-- Theme toggle removed for clean premium dark aesthetic -->
-      <button class="nav-btn" id="btn-cv">Voir le CV</button>
-    </div>
-    <button class="nav-hamburger" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+  <!-- Dynamic Ambient Glow Background -->
+  <div class="ambient-glow" aria-hidden="true">
+    <div class="glow-blob glow-1"></div>
+    <div class="glow-blob glow-2"></div>
+    <div class="glow-blob glow-3"></div>
   </div>
-</header>
 
-<!-- ━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="hero" class="hero">
-  <div class="wrapper hero-wrap">
-    <div class="hero-in">
-      <p class="chip">BTS SIO SLAM · ENC Bessières · Paris</p>
-      <h1>
-        <span class="h-first">Rayan</span>
-        <span class="h-last">CHERRAD</span>
-      </h1>
-      <p class="hero-desc">Développeur web en fin de BTS SIO SLAM. Je conçois des applications avec Vue.js, Node.js et PHP — des outils qui résolvent de vrais problèmes.</p>
-      <div class="hero-btns">
-        <a href="#projets" class="btn-cta">Voir mes projets</a>
-        <a href="#contact" class="btn-ghost">Me contacter</a>
+  <!-- ━━ NAV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <header class="nav" id="nav">
+    <div class="nav-in">
+      <a href="#hero" class="nav-logo">RC<span class="nav-dot">.</span></a>
+      <nav id="nav-menu">
+        <a href="#profil">Profil</a>
+        <a href="#competences">Compétences</a>
+        <a href="#projets">Projets</a>
+        <a href="#experiences">Expériences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="https://github.com/rayanjsp" class="nav-icon-link" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.335-1.755-1.335-1.755-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23A11.51 11.51 0 0112 5.8c1.02.005 2.047.138 3.006.404 2.29-1.552 3.297-1.23 3.297-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" class="nav-icon-link" target="_blank"
+          rel="noopener" aria-label="LinkedIn">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+          </svg>
+        </a>
+        <!-- Theme toggle removed for clean premium dark aesthetic -->
+        <button class="nav-btn" id="btn-cv">Voir le CV</button>
       </div>
+      <button class="nav-hamburger" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-    <div class="hero-terminal" aria-hidden="true">
-      <div class="ht-bar">
-        <span class="ht-dot"></span>
-        <span class="ht-dot"></span>
-        <span class="ht-dot"></span>
-        <span class="ht-title">terminal — zsh</span>
-      </div>
-      <div class="ht-body">
-        <p><span class="ht-prompt">$</span> whoami</p>
-        <p class="ht-out">rayan.cherrad</p>
-        <p><span class="ht-prompt">$</span> cat stack.json</p>
-        <p class="ht-out">["Vue 3", "Node.js", "PHP", "MySQL"]</p>
-        <p><span class="ht-prompt">$</span> ls projets/</p>
-        <p class="ht-out">AIQuizMaker/&nbsp;&nbsp;EchoBoard/&nbsp;&nbsp;Portfolio/</p>
-        <p><span class="ht-prompt">$</span> git status</p>
-        <p class="ht-out ht-green">✓ open to opportunities</p>
-        <p class="ht-cursor"><span class="ht-prompt">$</span> <span class="ht-blink">▋</span></p>
-      </div>
-    </div>
-  </div>
-  <div class="hero-stats">
-    <div class="wrapper stats-row">
-      <div class="stat"><b>3</b><span>Projets</span></div>
-      <div class="stat"><b>4</b><span>Certifications</span></div>
-      <div class="stat"><b>2</b><span>Expériences</span></div>
-    </div>
-  </div>
-</section>
+  </header>
 
-<!-- ━━ SKILLS STRIP ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<div class="skills-strip">
-  <div class="wrapper skills-grid">
-    <div class="skill-card fade-up">
-      <div class="skill-card-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 21h6M12 3a7 7 0 00-4 12.65V16a1 1 0 001 1h6a1 1 0 001-1v-2.35A7 7 0 0012 3z"/></svg>
-      </div>
-      <h3>Curiosité technique</h3>
-      <p>Toujours à la recherche de nouvelles approches — du Frontend au Backend, je creuse jusqu'à comprendre.</p>
-    </div>
-    <div class="skill-card fade-up">
-      <div class="skill-card-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
-      </div>
-      <h3>Rigueur</h3>
-      <p>Un code propre, une documentation claire, des tests systématiques — la qualité n'est pas une option.</p>
-    </div>
-    <div class="skill-card fade-up">
-      <div class="skill-card-icon">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-      </div>
-      <h3>Esprit d'équipe</h3>
-      <p>Habitué au travail Agile et au pair programming — seul on va vite, ensemble on va loin.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ━━ PROFIL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="profil" class="sec sec-alt">
-  <div class="wrapper">
-    <div class="about-grid">
-      <div class="about-l fade-up about-l-full">
-        <span class="tag-label">01 — Profil</span>
-        <h2>Qui suis-je&nbsp;?</h2>
-        <p>Étudiant en BTS SIO SLAM à l'ENC Bessières (Paris). Après un passage par le BUT GEII, j'ai trouvé ma voie dans le développement logiciel.</p>
-        <p>Ce qui me définit&nbsp;: la curiosité technique, l'envie de construire des choses utiles, et la rigueur dans l'exécution.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ━━ PARCOURS + CERTIFS ━━━━━━━━━━━━━━━━━━━━ -->
-<section id="parcours" class="sec">
-  <div class="wrapper">
-    <div class="sec-head fade-up">
-      <span class="tag-label">02 — Parcours & Certifications</span>
-      <h2>Formation</h2>
-    </div>
-    <div class="two-col">
-      <div class="fade-up">
-        <h3 class="col-title">Académique</h3>
-        <ol class="timeline">
-          <li>
-            <span class="tl-yr">2020–2023</span>
-            <div class="tl-content">
-              <strong>BAC Général</strong>
-              <p>Maths & NSI — Mention Bien</p>
-            </div>
-          </li>
-          <li>
-            <span class="tl-yr">2023–2024</span>
-            <div class="tl-content">
-              <strong>BUT GEII</strong>
-              <p>IUT Ville-d'Avray — électronique & info industrielle</p>
-            </div>
-          </li>
-          <li class="tl-active">
-            <span class="tl-yr">2024–2026</span>
-            <div class="tl-content">
-              <strong>BTS SIO — SLAM <em class="badge-now">En cours</em></strong>
-              <p>ENC Bessières, Paris</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-      <div class="fade-up">
-        <h3 class="col-title">Certifications</h3>
-        <ul class="cert-list">
-          <li><b>SecNumAcadémie</b><span>ANSSI · Cybersécurité</span></li>
-          <li><b>Responsive Web Design</b><span>freeCodeCamp · HTML/CSS</span></li>
-          <li><b>Python Certification</b><span>freeCodeCamp · Algorithmique</span></li>
-          <li><b>PIX</b><span>PIX · Compétences numériques</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ━━ COMPÉTENCES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="competences" class="sec sec-alt">
-  <div class="wrapper">
-    <div class="sec-head fade-up">
-      <span class="tag-label">03 — Compétences</span>
-      <h2>Mon expertise technique & fonctionnelle</h2>
-    </div>
-    <div class="comp-grid">
-      <div class="comp-col fade-up">
-        <h3>Développement</h3>
-        <ul class="comp-list">
-          <li>
-            <img src="assets/images/logos/html.png" alt="HTML / CSS" class="comp-icon">
-            <span>HTML / CSS</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/javascript.svg" alt="JavaScript" class="comp-icon">
-            <span>JavaScript</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/typescript.svg" alt="TypeScript" class="comp-icon">
-            <span>TypeScript</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/vue.svg" alt="Vue.js" class="comp-icon">
-            <span>Vue.js</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/react.svg" alt="React" class="comp-icon">
-            <span>React</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/nodejs.svg" alt="Node.js" class="comp-icon">
-            <span>Node.js</span>
-          </li>
-          <li>
-            <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 8V2"/><path d="M15 8V2"/><path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z"/></svg>
-            <span>API REST</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/php.svg" alt="PHP" class="comp-icon">
-            <span>PHP</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/python.png" alt="Python" class="comp-icon">
-            <span>Python</span>
-          </li>
-          <li>
-            <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v20 M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            <span>Java</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/mysql.svg" alt="MySQL" class="comp-icon">
-            <span>SQL / MySQL</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="comp-col fade-up">
-        <h3>Outils & Cloud</h3>
-        <ul class="comp-list">
-          <li>
-            <img src="assets/images/logos/git.svg" alt="Git" class="comp-icon">
-            <span>Git</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/azure.svg" alt="Azure" class="comp-icon">
-            <span>Azure</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/netlify.svg" alt="Netlify" class="comp-icon">
-            <span>Netlify</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/vercel.svg" alt="Vercel" class="comp-icon">
-            <span>Vercel</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/render.svg" alt="Render" class="comp-icon">
-            <span>Render</span>
-          </li>
-          <li>
-            <img src="assets/images/logos/supabase.svg" alt="Supabase" class="comp-icon">
-            <span>Supabase</span>
-          </li>
-          <li>
-            <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3z"/><path d="M9 7v5M15 7v9"/></svg>
-            <span>Trello</span>
-          </li>
-        </ul>
-      </div>
-
-      <div class="comp-col fade-up">
-        <h3>Gestion & Support</h3>
-        <ul class="comp-list comp-text">
-          <li><strong>Agilité</strong> – Animation de réunions, pilotage d'équipe de stagiaires</li>
-          <li><strong>Recette Applicative</strong> – Tests fonctionnels, validation d'outils CMS</li>
-          <li><strong>Support & Analyse</strong> – Recueil de besoins utilisateurs, support fonctionnel N1/N2</li>
-          <li><strong>Documentation</strong> – Spécifications, guides utilisateurs et tech</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ━━ PROJETS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="projets" class="sec">
-  <div class="wrapper">
-    <div class="sec-head fade-up">
-      <span class="tag-label">04 — Projets</span>
-      <h2>Ce que j'ai construit</h2>
-    </div>
-    <div class="proj-grid">
-
-      <article class="proj-card fade-up">
-        <div class="proj-card-gfx proj-gfx--a">
-          <span class="proj-num">01</span>
+  <!-- ━━ HERO ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="hero" class="hero">
+    <div class="wrapper hero-wrap">
+      <div class="hero-in">
+        <p class="chip">BTS SIO SLAM · ENC Bessières · Paris</p>
+        <h1>
+          <span class="h-first">Rayan</span>
+          <span class="h-last">CHERRAD</span>
+        </h1>
+        <p class="hero-desc">Développeur web en fin de BTS SIO SLAM. Je conçois des applications avec Vue.js, Node.js et
+          PHP — des outils qui résolvent de vrais problèmes.</p>
+        <div class="hero-btns">
+          <a href="#projets" class="btn-cta">Voir mes projets</a>
+          <a href="#contact" class="btn-ghost">Me contacter</a>
         </div>
-        <div class="proj-card-body">
-          <h3>AIQuizMaker</h3>
-          <p>Plateforme d'évaluation & formation. Génération automatique de QCM via IA, tableau de bord de suivi des scores, export PDF des résultats.</p>
-          <div class="tech-tags">
-            <span>Vue 3</span><span>Node.js</span><span>Prisma</span><span>API multi-IA</span>
-          </div>
-          <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
+      </div>
+      <div class="hero-terminal" aria-hidden="true">
+        <div class="ht-bar">
+          <span class="ht-dot"></span>
+          <span class="ht-dot"></span>
+          <span class="ht-dot"></span>
+          <span class="ht-title">terminal — zsh</span>
         </div>
-      </article>
+        <div class="ht-body">
+          <p><span class="ht-prompt">$</span> whoami</p>
+          <p class="ht-out">rayan.cherrad</p>
+          <p><span class="ht-prompt">$</span> cat stack.json</p>
+          <p class="ht-out">["Vue 3", "Node.js", "PHP", "MySQL"]</p>
+          <p><span class="ht-prompt">$</span> ls projets/</p>
+          <p class="ht-out">AIQuizMaker/&nbsp;&nbsp;EchoBoard/&nbsp;&nbsp;Portfolio/</p>
+          <p><span class="ht-prompt">$</span> git status</p>
+          <p class="ht-out ht-green">✓ open to opportunities</p>
+          <p class="ht-cursor"><span class="ht-prompt">$</span> <span class="ht-blink">▋</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="wrapper stats-row">
+        <div class="stat"><b>3</b><span>Projets</span></div>
+        <div class="stat"><b>4</b><span>Certifications</span></div>
+        <div class="stat"><b>2</b><span>Expériences</span></div>
+      </div>
+    </div>
+  </section>
 
-      <article class="proj-card fade-up">
-        <div class="proj-card-gfx proj-gfx--b">
-          <span class="proj-num">02</span>
+  <!-- ━━ SKILLS STRIP ━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div class="skills-strip">
+    <div class="wrapper skills-grid">
+      <div class="skill-card fade-up">
+        <div class="skill-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M9 21h6M12 3a7 7 0 00-4 12.65V16a1 1 0 001 1h6a1 1 0 001-1v-2.35A7 7 0 0012 3z" />
+          </svg>
         </div>
-        <div class="proj-card-body">
-          <h3>EchoBoard</h3>
-          <p>Réseau social d'entreprise. Gestion des rôles et permissions, partage de contenu, interactions entre collaborateurs.</p>
-          <div class="tech-tags">
-            <span>Vue.js 3</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>JWT</span>
-          </div>
-          <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
+        <h3>Curiosité technique</h3>
+        <p>Toujours à la recherche de nouvelles approches — du Frontend au Backend, je creuse jusqu'à comprendre.</p>
+      </div>
+      <div class="skill-card fade-up">
+        <div class="skill-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <circle cx="12" cy="12" r="10" />
+            <circle cx="12" cy="12" r="6" />
+            <circle cx="12" cy="12" r="2" />
+          </svg>
         </div>
-      </article>
-
-      <article class="proj-card fade-up">
-        <div class="proj-card-gfx proj-gfx--c">
-          <span class="proj-num">03</span>
+        <h3>Rigueur</h3>
+        <p>Un code propre, une documentation claire, des tests systématiques — la qualité n'est pas une option.</p>
+      </div>
+      <div class="skill-card fade-up">
+        <div class="skill-card-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round">
+            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+            <circle cx="9" cy="7" r="4" />
+            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+          </svg>
         </div>
-        <div class="proj-card-body">
-          <h3>Portfolio</h3>
-          <p>Ce site — conçu et développé from scratch. Design system cohérent, responsive, dark mode et animations au scroll.</p>
-          <div class="tech-tags">
-            <span>HTML</span><span>CSS</span><span>JavaScript</span>
-          </div>
-          <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
-        </div>
-      </article>
-
+        <h3>Esprit d'équipe</h3>
+        <p>Habitué au travail Agile et au pair programming — seul on va vite, ensemble on va loin.</p>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- ━━ EXPÉRIENCES ━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="experiences" class="sec sec-alt">
-  <div class="wrapper">
-    <div class="sec-head fade-up">
-      <span class="tag-label">05 — Expériences</span>
-      <h2>Expériences professionnelles</h2>
+  <!-- ━━ PROFIL ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="profil" class="sec sec-alt">
+    <div class="wrapper">
+      <div class="about-grid">
+        <div class="about-l fade-up about-l-full">
+          <span class="tag-label">01 — Profil</span>
+          <h2>Qui suis-je&nbsp;?</h2>
+          <p>Étudiant en BTS SIO SLAM à l'ENC Bessières (Paris). Après un passage par le BUT GEII, j'ai trouvé ma voie
+            dans le développement logiciel.</p>
+          <p>Ce qui me définit&nbsp;: la curiosité technique, l'envie de construire des choses utiles, et la rigueur
+            dans l'exécution.</p>
+        </div>
+      </div>
     </div>
-    <ol class="timeline">
-      <li class="fade-up">
-        <span class="tl-yr">Janv.–Fév. 2026</span>
-        <div class="tl-content">
-          <strong>Chef de Projet Junior & Développeur</strong>
-          <em>Association Les Petits Soldats du Bonheur</em>
-          <ul class="tl-list">
-            <li><b>Gestion de projet Agile :</b> pilotage d'une équipe de 3 stagiaires, animation de réunions de suivi quotidiennes avec le commanditaire, organisation des tâches via Trello.</li>
-            <li><b>Analyse de besoins & développement :</b> conception et développement d'un CMS sur mesure en 6 semaines (système de blocs personnalisables, dashboard administrateur).</li>
-            <li><b>Tests & recette :</b> validation fonctionnelle de l'outil avant livraison (tests réalisés et validés personnellement).</li>
-            <li><b>Documentation :</b> rédaction d'un guide utilisateur et d'une documentation technique pour assurer la prise en main autonome de l'administrateur final.</li>
+  </section>
+
+  <!-- ━━ PARCOURS + CERTIFS ━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="parcours" class="sec">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">02 — Parcours & Certifications</span>
+        <h2>Formation</h2>
+      </div>
+      <div class="two-col">
+        <div class="fade-up">
+          <h3 class="col-title">Académique</h3>
+          <ol class="timeline">
+            <li>
+              <span class="tl-yr">2020–2023</span>
+              <div class="tl-content">
+                <strong>BAC Général</strong>
+                <p>Maths & NSI — Mention Bien</p>
+              </div>
+            </li>
+            <li>
+              <span class="tl-yr">2023–2024</span>
+              <div class="tl-content">
+                <strong>BUT GEII</strong>
+                <p>IUT Ville-d'Avray — électronique & info industrielle</p>
+              </div>
+            </li>
+            <li class="tl-active">
+              <span class="tl-yr">2024–2026</span>
+              <div class="tl-content">
+                <strong>BTS SIO — SLAM <em class="badge-now">En cours</em></strong>
+                <p>ENC Bessières, Paris</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="fade-up">
+          <h3 class="col-title">Certifications</h3>
+          <ul class="cert-list">
+            <li><b>SecNumAcadémie</b><span>ANSSI · Cybersécurité</span></li>
+            <li><b>Responsive Web Design</b><span>freeCodeCamp · HTML/CSS</span></li>
+            <li><b>Python Certification</b><span>freeCodeCamp · Algorithmique</span></li>
+            <li><b>PIX</b><span>PIX · Compétences numériques</span></li>
           </ul>
         </div>
-      </li>
-      <li class="fade-up">
-        <span class="tl-yr">2025</span>
-        <div class="tl-content">
-          <strong>Développeur Full-Stack</strong>
-          <em>ENC Bessières</em>
-          <ul class="tl-list">
-            <li><b>Recueil de besoins :</b> échanges directs avec les utilisateurs finaux (personnel pédagogique) pour comprendre et formaliser leurs besoins.</li>
-            <li><b>Développement & automatisation :</b> conception d'un outil web automatisant le processus d'inscription de plus de 700 élèves, supprimant plus de deux semaines de traitement manuel.</li>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━ COMPÉTENCES ━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="competences" class="sec sec-alt">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">03 — Compétences</span>
+        <h2>Mon expertise technique & fonctionnelle</h2>
+      </div>
+      <div class="comp-grid">
+        <div class="comp-col fade-up">
+          <h3>Développement</h3>
+          <ul class="comp-list">
+            <li>
+              <img src="assets/images/logos/html.png" alt="HTML / CSS" class="comp-icon">
+              <span>HTML / CSS</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/javascript.svg" alt="JavaScript" class="comp-icon">
+              <span>JavaScript</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/typescript.svg" alt="TypeScript" class="comp-icon">
+              <span>TypeScript</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/vue.svg" alt="Vue.js" class="comp-icon">
+              <span>Vue.js</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/react.svg" alt="React" class="comp-icon">
+              <span>React</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/nodejs.svg" alt="Node.js" class="comp-icon">
+              <span>Node.js</span>
+            </li>
+            <li>
+              <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-5" />
+                <path d="M9 8V2" />
+                <path d="M15 8V2" />
+                <path d="M18 8v5a4 4 0 0 1-4 4h-4a4 4 0 0 1-4-4V8Z" />
+              </svg>
+              <span>API REST</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/php.svg" alt="PHP" class="comp-icon">
+              <span>PHP</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/python.png" alt="Python" class="comp-icon">
+              <span>Python</span>
+            </li>
+            <li>
+              <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round">
+                <path d="M12 2v20 M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+              </svg>
+              <span>Java</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/mysql.svg" alt="MySQL" class="comp-icon">
+              <span>SQL / MySQL</span>
+            </li>
           </ul>
         </div>
-      </li>
-    </ol>
-  </div>
-</section>
 
-<!-- ━━ VEILLE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section class="sec sec-alt">
-  <div class="wrapper">
-    <div class="sec-head fade-up">
-      <span class="tag-label">06 — Veille</span>
-      <h2>L'IA dans le développement web</h2>
-    </div>
-    <div class="veille-grid">
-      <article class="veille-card fade-up">
-        <span class="v-date">15 sept. 2024</span>
-        <h3>L'arrivée de Devin AI</h3>
-        <p>Premier ingénieur IA autonome capable de coder, tester et déployer seul. Un signal fort : l'IA ne remplace pas encore le développeur, mais redéfinit ce qu'on attend de lui.</p>
-        <footer>Blog du Modérateur &nbsp;·&nbsp; <a href="https://www.blogdumoderateur.com" target="_blank" rel="noopener">Lire →</a></footer>
-      </article>
-      <article class="veille-card fade-up">
-        <span class="v-date">02 oct. 2024</span>
-        <h3>GitHub Copilot Workspace</h3>
-        <p>Les assistants IA évoluent en environnements de développement complets. J'utilise Copilot au quotidien — la différence de vélocité est réelle, surtout sur les tâches répétitives.</p>
-        <footer>TechCrunch &nbsp;·&nbsp; <a href="https://techcrunch.com" target="_blank" rel="noopener">Lire →</a></footer>
-      </article>
-      <article class="veille-card fade-up">
-        <span class="v-date">10 nov. 2024</span>
-        <h3>L'IA va-t-elle remplacer les juniors ?</h3>
-        <p>Analyse sur la place des développeurs débutants face à l'IA. Mon point de vue : ceux qui savent utiliser l'IA comme outil auront un avantage décisif sur ceux qui la subissent.</p>
-        <footer>Human Coders &nbsp;·&nbsp; <a href="https://humancoders.com" target="_blank" rel="noopener">Lire →</a></footer>
-      </article>
-    </div>
-  </div>
-</section>
+        <div class="comp-col fade-up">
+          <h3>Outils & Cloud</h3>
+          <ul class="comp-list">
+            <li>
+              <img src="assets/images/logos/git.svg" alt="Git" class="comp-icon">
+              <span>Git</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/azure.svg" alt="Azure" class="comp-icon">
+              <span>Azure</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/netlify.svg" alt="Netlify" class="comp-icon">
+              <span>Netlify</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/vercel.svg" alt="Vercel" class="comp-icon">
+              <span>Vercel</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/render.svg" alt="Render" class="comp-icon">
+              <span>Render</span>
+            </li>
+            <li>
+              <img src="assets/images/logos/supabase.svg" alt="Supabase" class="comp-icon">
+              <span>Supabase</span>
+            </li>
+            <li>
+              <svg class="comp-icon gen-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3z" />
+                <path d="M9 7v5M15 7v9" />
+              </svg>
+              <span>Trello</span>
+            </li>
+          </ul>
+        </div>
 
-<!-- ━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<section id="contact" class="sec contact-section">
-  <div class="wrapper">
-    <div class="contact-inner">
-      <div class="contact-text fade-up">
-        <span class="tag-label tag-label--light">07 — Contact</span>
-        <h2>Travaillons<br>ensemble.</h2>
-        <p>Stage, alternance, projet ou simple échange — je suis disponible.</p>
-        <div class="contact-socials">
-          <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener" class="btn-ghost btn-ghost--light">LinkedIn</a>
-          <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="btn-ghost btn-ghost--light">GitHub</a>
+        <div class="comp-col fade-up">
+          <h3>Gestion & Support</h3>
+          <ul class="comp-list comp-text">
+            <li><strong>Agilité</strong> – Animation de réunions, pilotage d'équipe de stagiaires</li>
+            <li><strong>Recette Applicative</strong> – Tests fonctionnels, validation d'outils CMS</li>
+            <li><strong>Support & Analyse</strong> – Recueil de besoins utilisateurs, support fonctionnel N1/N2</li>
+            <li><strong>Documentation</strong> – Spécifications, guides utilisateurs et tech</li>
+          </ul>
         </div>
       </div>
-      <form class="contact-form fade-up" id="contact-form" novalidate>
-        <div class="cf-row">
-          <div class="cf-field">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+    </div>
+  </section>
+
+  <!-- ━━ PROJETS ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="projets" class="sec">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">04 — Projets</span>
+        <h2>Ce que j'ai construit</h2>
+      </div>
+      <div class="proj-grid">
+
+        <article class="proj-card fade-up">
+          <div class="proj-card-gfx proj-gfx--a">
+            <span class="proj-num">01</span>
           </div>
-          <div class="cf-field">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+          <div class="proj-card-body">
+            <h3>AIQuizMaker</h3>
+            <p>Plateforme d'évaluation & formation. Génération automatique de QCM via IA, tableau de bord de suivi des
+              scores, export PDF des résultats.</p>
+            <div class="tech-tags">
+              <span>Vue 3</span><span>Node.js</span><span>Prisma</span><span>API multi-IA</span>
+            </div>
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="proj-card fade-up">
+          <div class="proj-card-gfx proj-gfx--b">
+            <span class="proj-num">02</span>
+          </div>
+          <div class="proj-card-body">
+            <h3>EchoBoard</h3>
+            <p>Réseau social d'entreprise. Gestion des rôles et permissions, partage de contenu, interactions entre
+              collaborateurs.</p>
+            <div class="tech-tags">
+              <span>Vue.js 3</span><span>Node.js</span><span>Express</span><span>MySQL</span><span>JWT</span>
+            </div>
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="proj-card fade-up">
+          <div class="proj-card-gfx proj-gfx--c">
+            <span class="proj-num">03</span>
+          </div>
+          <div class="proj-card-body">
+            <h3>Portfolio</h3>
+            <p>Ce site — conçu et développé from scratch. Design system cohérent, responsive, dark mode et animations au
+              scroll.</p>
+            <div class="tech-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener" class="proj-link">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━ EXPÉRIENCES ━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="experiences" class="sec sec-alt">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">05 — Expériences</span>
+        <h2>Expériences professionnelles</h2>
+      </div>
+      <ol class="timeline">
+        <li class="fade-up">
+          <span class="tl-yr">Janv.–Fév. 2026</span>
+          <div class="tl-content">
+            <strong>Développeur Full-Stack</strong>
+            <em>Association Les Petits Soldats du Bonheur</em>
+            <ul class="tl-list">
+              <li><b>Gestion de projet Agile :</b> pilotage d'une équipe de 3 stagiaires, animation de réunions de suivi
+                quotidiennes avec le commanditaire, organisation des tâches via Trello.</li>
+              <li><b>Analyse de besoins & développement :</b> conception et développement d'un CMS sur mesure en 6
+                semaines (système de blocs personnalisables, dashboard administrateur).</li>
+              <li><b>Tests & recette :</b> validation fonctionnelle de l'outil avant livraison (tests réalisés et
+                validés personnellement).</li>
+              <li><b>Documentation :</b> rédaction d'un guide utilisateur et d'une documentation technique pour assurer
+                la prise en main autonome de l'administrateur final.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="fade-up">
+          <span class="tl-yr">2025</span>
+          <div class="tl-content">
+            <strong>Développeur Full-Stack</strong>
+            <em>ENC Bessières</em>
+            <ul class="tl-list">
+              <li><b>Recueil de besoins :</b> échanges directs avec les utilisateurs finaux (personnel pédagogique) pour
+                comprendre et formaliser leurs besoins.</li>
+              <li><b>Développement & automatisation :</b> conception d'un outil web automatisant le processus
+                d'inscription de plus de 700 élèves.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ━━ VEILLE ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section class="sec sec-alt">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">06 — Veille</span>
+        <h2>L'IA dans le développement web</h2>
+      </div>
+      <div class="veille-grid">
+        <article class="veille-card fade-up">
+          <span class="v-date">15 sept. 2024</span>
+          <h3>L'arrivée de Devin AI</h3>
+          <p>Premier ingénieur IA autonome capable de coder, tester et déployer seul. Un signal fort : l'IA ne remplace
+            pas encore le développeur, mais redéfinit ce qu'on attend de lui.</p>
+          <footer>Blog du Modérateur &nbsp;·&nbsp; <a href="https://www.blogdumoderateur.com" target="_blank"
+              rel="noopener">Lire →</a></footer>
+        </article>
+        <article class="veille-card fade-up">
+          <span class="v-date">02 oct. 2024</span>
+          <h3>GitHub Copilot Workspace</h3>
+          <p>Les assistants IA évoluent en environnements de développement complets. J'utilise Copilot au quotidien — la
+            différence de vélocité est réelle, surtout sur les tâches répétitives.</p>
+          <footer>TechCrunch &nbsp;·&nbsp; <a href="https://techcrunch.com" target="_blank" rel="noopener">Lire →</a>
+          </footer>
+        </article>
+        <article class="veille-card fade-up">
+          <span class="v-date">10 nov. 2024</span>
+          <h3>L'IA va-t-elle remplacer les juniors ?</h3>
+          <p>Analyse sur la place des développeurs débutants face à l'IA. Mon point de vue : ceux qui savent utiliser
+            l'IA comme outil auront un avantage décisif sur ceux qui la subissent.</p>
+          <footer>Human Coders &nbsp;·&nbsp; <a href="https://humancoders.com" target="_blank" rel="noopener">Lire →</a>
+          </footer>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━ CONTACT ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="contact" class="sec contact-section">
+    <div class="wrapper">
+      <div class="contact-inner">
+        <div class="contact-text fade-up">
+          <span class="tag-label tag-label--light">07 — Contact</span>
+          <h2>Travaillons<br>ensemble.</h2>
+          <p>Stage, alternance, projet ou simple échange — je suis disponible.</p>
+          <div class="contact-socials">
+            <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener"
+              class="btn-ghost btn-ghost--light">LinkedIn</a>
+            <a href="https://github.com/rayanjsp" target="_blank" rel="noopener"
+              class="btn-ghost btn-ghost--light">GitHub</a>
           </div>
         </div>
-        <div class="cf-field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Bonjour Rayan..." required></textarea>
-        </div>
-        <button type="submit" class="btn-cta btn-cta--white">Envoyer →</button>
-        <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
-      </form>
+        <form class="contact-form fade-up" id="contact-form" novalidate>
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="nom">Nom</label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+            </div>
+            <div class="cf-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+            </div>
+          </div>
+          <div class="cf-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Bonjour Rayan..." required></textarea>
+          </div>
+          <button type="submit" class="btn-cta btn-cta--white">Envoyer →</button>
+          <p class="form-feedback" id="form-feedback" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <footer class="footer">
+    <div class="wrapper footer-in">
+      <span>© 2026 Rayan CHERRAD</span>
+      <div class="footer-socials">
+        <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/rayanjsp" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ━━ MODAL CV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
+  <div id="modal-cv" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-box modal-box--large">
+      <button class="modal-x" id="modal-close" aria-label="Fermer">&times;</button>
+      <h2>Curriculum Vitae</h2>
+      <div class="cv-preview-container">
+        <iframe src="assets/documents/CV_Rayan_Cherrad.pdf" title="CV de Rayan CHERRAD"
+          class="cv-preview-frame"></iframe>
+      </div>
+      <div class="modal-actions">
+        <a href="assets/documents/CV_Rayan_Cherrad.pdf" class="btn-cta" download>Télécharger en PDF</a>
+        <a href="assets/documents/CV_Rayan_Cherrad.docx" class="btn-ghost" download>Télécharger en Word</a>
+      </div>
     </div>
   </div>
-</section>
 
-<!-- ━━ FOOTER ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<footer class="footer">
-  <div class="wrapper footer-in">
-    <span>© 2026 Rayan CHERRAD</span>
-    <div class="footer-socials">
-      <a href="https://www.linkedin.com/in/rayan-cherrad-b378452a3/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://github.com/rayanjsp" target="_blank" rel="noopener">GitHub</a>
-    </div>
-  </div>
-</footer>
-
-<!-- ━━ MODAL CV ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ -->
-<div id="modal-cv" class="modal" role="dialog" aria-modal="true">
-  <div class="modal-box modal-box--large">
-    <button class="modal-x" id="modal-close" aria-label="Fermer">&times;</button>
-    <h2>Curriculum Vitae</h2>
-    <div class="cv-preview-container">
-      <iframe src="assets/documents/CV_Rayan_Cherrad.pdf" title="CV de Rayan CHERRAD" class="cv-preview-frame"></iframe>
-    </div>
-    <div class="modal-actions">
-      <a href="assets/documents/CV_Rayan_Cherrad.pdf" class="btn-cta" download>Télécharger en PDF</a>
-      <a href="assets/documents/CV_Rayan_Cherrad.docx" class="btn-ghost" download>Télécharger en Word</a>
-    </div>
-  </div>
-</div>
-
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
+
 </html>
