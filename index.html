@@ -34,6 +34,7 @@
         <a href="#projets">Projets</a>
         <a href="#experiences">Expériences</a>
         <a href="#parcours">Parcours</a>
+        <a href="#tableau-synthese">Tableau E5</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="nav-actions">
@@ -68,8 +69,8 @@
           <span class="h-first">Rayan</span>
           <span class="h-last">CHERRAD</span>
         </h1>
-        <p class="hero-desc">Développeur web en fin de BTS SIO SLAM. Je conçois des applications avec Vue.js, Node.js et
-          PHP — des outils qui résolvent de vrais problèmes.</p>
+        <p class="hero-desc">Développeur web en fin de BTS SIO SLAM. Je conçois des applications et
+          des outils qui résolvent de vrais problèmes.</p>
         <div class="hero-btns">
           <a href="#projets" class="btn-cta">Voir mes projets</a>
           <a href="#contact" class="btn-ghost">Me contacter</a>
@@ -431,31 +432,205 @@
         <span class="tag-label">06 — Veille</span>
         <h2>L'IA dans le développement web</h2>
       </div>
-      <div class="veille-grid">
-        <article class="veille-card fade-up">
-          <span class="v-date">15 sept. 2024</span>
-          <h3>L'arrivée de Devin AI</h3>
-          <p>Premier ingénieur IA autonome capable de coder, tester et déployer seul. Un signal fort : l'IA ne remplace
-            pas encore le développeur, mais redéfinit ce qu'on attend de lui.</p>
-          <footer>Blog du Modérateur &nbsp;·&nbsp; <a href="https://www.blogdumoderateur.com" target="_blank"
-              rel="noopener">Lire →</a></footer>
-        </article>
-        <article class="veille-card fade-up">
-          <span class="v-date">02 oct. 2024</span>
-          <h3>GitHub Copilot Workspace</h3>
-          <p>Les assistants IA évoluent en environnements de développement complets. J'utilise Copilot au quotidien — la
-            différence de vélocité est réelle, surtout sur les tâches répétitives.</p>
-          <footer>TechCrunch &nbsp;·&nbsp; <a href="https://techcrunch.com" target="_blank" rel="noopener">Lire →</a>
-          </footer>
-        </article>
-        <article class="veille-card fade-up">
-          <span class="v-date">10 nov. 2024</span>
-          <h3>L'IA va-t-elle remplacer les juniors ?</h3>
-          <p>Analyse sur la place des développeurs débutants face à l'IA. Mon point de vue : ceux qui savent utiliser
-            l'IA comme outil auront un avantage décisif sur ceux qui la subissent.</p>
-          <footer>Human Coders &nbsp;·&nbsp; <a href="https://humancoders.com" target="_blank" rel="noopener">Lire →</a>
-          </footer>
-        </article>
+
+      <!-- TOGGLE FRISE -->
+      <div class="veille-toggle-wrap">
+        <button class="btn-veille-toggle" id="btn-veille-toggle">Dérouler la frise (9 articles) ↓</button>
+      </div>
+
+      <!-- FRISE CHRONOLOGIQUE -->
+      <div class="veille-timeline collapsed">
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">avr. 2024</span>
+          </div>
+          <article class="veille-card">
+            <h3>GitHub Copilot Workspace</h3>
+            <p>GitHub pousse Copilot vers un environnement de développement complet : l'outil génère une spec, un
+              plan, puis implémente le code en langage naturel. L'assistant ne complète plus une ligne — il pense
+              l'architecture.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2024/04/29/copilot-workspace-is-githubs-take-on-ai-powered-software-engineering/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">sept. 2025</span>
+          </div>
+          <article class="veille-card">
+            <h3>Comment Google intègre l'IA dans le workflow des devs</h3>
+            <p>Le responsable des outils dev chez Google explique comment ses équipes utilisent l'IA au quotidien
+              — pas comme une baguette magique, mais comme un accélérateur dans des workflows précis. Un regard
+              pragmatique qui tranche avec le discours habituel.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2025/09/23/how-googles-dev-tools-manager-makes-ai-coding-work/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">oct. 2025</span>
+          </div>
+          <article class="veille-card">
+            <h3>Claude Code arrive sur le web</h3>
+            <p>Anthropic lance une interface web pour Claude Code, permettant de gérer plusieurs agents IA depuis
+              le navigateur. L'outil gagne en accessibilité — signe que le développement agentique devient une
+              pratique courante.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2025/10/20/anthropic-brings-claude-code-to-the-web/" target="_blank"
+                rel="noopener">Lire →</a></footer>
+          </article>
+          <div class="tl-bubble">
+            <div class="tl-bubble-inner">
+              <span class="bubble-label">Outils</span>
+              <p>En 2 ans, l'assistant suggérait une ligne — aujourd'hui il conçoit l'architecture complète.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">nov. 2025</span>
+          </div>
+          <article class="veille-card">
+            <h3>Cursor lève 2,3 Mds$ — valorisé à 29 Mds$</h3>
+            <p>L'éditeur de code IA Cursor boucle une levée colossale. Quand un éditeur de texte vaut plus que la
+              plupart des grandes entreprises du CAC 40, c'est que le marché considère l'IA dans le code comme
+              une infrastructure essentielle.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2025/11/13/coding-assistant-cursor-raises-2-3b-5-months-after-its-previous-round/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">déc. 2025</span>
+          </div>
+          <article class="veille-card">
+            <h3>2025 : l'IA confrontée à la réalité</h3>
+            <p>TechCrunch fait le bilan d'une année charnière : l'IA a tenu certaines de ses promesses mais s'est
+              heurtée aux attentes gonflées. Les outils qui survivent sont ceux qui améliorent vraiment la vélocité
+              des développeurs.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2025/12/29/2025-was-the-year-ai-got-a-vibe-check/" target="_blank"
+                rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">janv. 2026</span>
+          </div>
+          <article class="veille-card">
+            <h3>En 2026, l'IA quitte le buzz pour le pragmatisme</h3>
+            <p>Après des années de promesses, 2026 marque le tournant vers une IA utile et mesurable. Les agents
+              codent vraiment, les pipelines CI/CD intègrent l'IA nativement. Apprendre à travailler avec ces
+              outils n'est plus optionnel.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2026/01/02/in-2026-ai-will-move-from-hype-to-pragmatism/" target="_blank"
+                rel="noopener">Lire →</a></footer>
+          </article>
+          <div class="tl-bubble">
+            <div class="tl-bubble-inner">
+              <span class="bubble-label">Marché</span>
+              <p>Cursor à 29 Mds$ : l'IA dans le code est devenu de l'infrastructure, pas un gadget.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">févr. 2026</span>
+          </div>
+          <article class="veille-card">
+            <h3>Spotify : les meilleurs devs n'ont plus écrit une ligne de code</h3>
+            <p>Spotify révèle que ses ingénieurs seniors n'ont pas touché au code manuellement depuis décembre —
+              tout passe par Claude Code. Pas une dystopie, une réalité : l'IA redéfinit concrètement ce que
+              "développer" veut dire.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2026/02/12/spotify-says-its-best-developers-havent-written-a-line-of-code-since-december-thanks-to-ai/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">mars 2026</span>
+          </div>
+          <article class="veille-card">
+            <h3>Cursor Automations : des agents toujours actifs dans le code</h3>
+            <p>Cursor déploie un système d'agents autonomes déclenchés par événements — nouveau commit, message
+              Slack ou minuterie. L'IDE ne s'arrête plus quand le développeur part. La frontière entre l'outil
+              et le collaborateur devient floue.</p>
+            <footer>TechCrunch &nbsp;·&nbsp; <a
+                href="https://techcrunch.com/2026/03/05/cursor-is-rolling-out-a-new-system-for-agentic-coding/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+          <div class="tl-bubble">
+            <div class="tl-bubble-inner">
+              <span class="bubble-label">Perspective</span>
+              <p>L'enjeu n'est plus d'apprendre à coder, mais de diriger ces outils avec précision.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-up">
+          <div class="tl-marker">
+            <div class="tl-dot"></div><span class="tl-date">avr. 2026</span>
+          </div>
+          <article class="veille-card">
+            <h3>Enquête : quels outils IA les devs utilisent vraiment au travail ?</h3>
+            <p>JetBrains publie une étude sur l'adoption réelle en entreprise : GitHub Copilot reste leader, mais
+              Claude Code et Cursor progressent fortement. 90 % des développeurs utilisent au moins un outil IA
+              au quotidien. L'IA dans le code n'est plus un choix, c'est une norme.</p>
+            <footer>JetBrains Research &nbsp;·&nbsp; <a
+                href="https://blog.jetbrains.com/research/2026/04/which-ai-coding-tools-do-developers-actually-use-at-work/"
+                target="_blank" rel="noopener">Lire →</a></footer>
+          </article>
+        </div>
+
+      </div><!-- /veille-timeline -->
+
+      <!-- CONCLUSION -->
+      <div class="veille-conclusion fade-up">
+        <p>La tendance est claire : <strong>l'IA transforme le développement web à une vitesse sans précédent</strong>,
+          des environnements assistés aux agents autonomes capables de coder des fonctionnalités entières. Ce n'est
+          pas une disruption qui arrive — elle est déjà là. Pour les développeurs d'aujourd'hui et de demain,
+          l'enjeu n'est plus d'apprendre à coder, mais <strong>d'apprendre à diriger ces nouveaux outils avec
+            précision</strong>.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ━━ TABLEAU DE SYNTHÈSE ━━━━━━━━━━━━━━━━━━━━ -->
+  <section id="tableau-synthese" class="sec">
+    <div class="wrapper">
+      <div class="sec-head fade-up">
+        <span class="tag-label">08 — Épreuve E5</span>
+        <h2>Tableau de synthèse</h2>
+      </div>
+      <div class="doc-preview-card fade-up">
+        <div class="doc-preview-icon" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+            <polyline points="14 2 14 8 20 8" />
+            <line x1="16" y1="13" x2="8" y2="13" />
+            <line x1="16" y1="17" x2="8" y2="17" />
+            <polyline points="10 9 9 9 8 9" />
+          </svg>
+        </div>
+        <div class="doc-preview-info">
+          <h3>Tableau de synthèse — Épreuve E5</h3>
+          <p>Récapitulatif des situations professionnelles significatives réalisées durant le BTS SIO SLAM.</p>
+        </div>
+        <button class="btn-cta" id="btn-tableau">Visualiser →</button>
       </div>
     </div>
   </section>
@@ -520,6 +695,23 @@
       <div class="modal-actions">
         <a href="assets/documents/CV_Rayan_Cherrad.pdf" class="btn-cta" download>Télécharger en PDF</a>
         <a href="assets/documents/CV_Rayan_Cherrad.docx" class="btn-ghost" download>Télécharger en Word</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ━━ MODAL TABLEAU DE SYNTHÈSE ━━━━━━━━━━━━━━ -->
+  <div id="modal-tableau" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-box modal-box--large">
+      <button class="modal-x" id="modal-tableau-close" aria-label="Fermer">&times;</button>
+      <h2>Tableau de synthèse — Épreuve E5</h2>
+      <div class="cv-preview-container">
+        <iframe
+          src="assets/documents/Tableau%20synth%C3%A9se%20final%20-%20Tableau%20de%20synth%C3%A8se%20%C3%89preuve%20E5.pdf"
+          title="Tableau de synthèse Épreuve E5" class="cv-preview-frame"></iframe>
+      </div>
+      <div class="modal-actions">
+        <a href="assets/documents/Tableau%20synth%C3%A9se%20final%20-%20Tableau%20de%20synth%C3%A8se%20%C3%89preuve%20E5.pdf"
+          class="btn-cta" download>Télécharger en PDF</a>
       </div>
     </div>
   </div>

@@ -10,6 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('click', e => { if (e.target === modal) hide(); });
   function hide(){ modal.style.display = 'none'; document.body.style.overflow = ''; }
 
+  /* ── Modal Tableau de synthèse ── */
+  const modalT = document.getElementById('modal-tableau');
+  const openT  = document.getElementById('btn-tableau');
+  const closeT = document.getElementById('modal-tableau-close');
+
+  openT.addEventListener('click', () => { modalT.style.display = 'block'; document.body.style.overflow = 'hidden'; });
+  closeT.addEventListener('click', hideT);
+  window.addEventListener('click', e => { if (e.target === modalT) hideT(); });
+  function hideT(){ modalT.style.display = 'none'; document.body.style.overflow = ''; }
+
   /* ── Hamburger menu ── */
   const navToggle = document.getElementById('nav-toggle');
   const navMenu   = document.querySelector('.nav nav');
@@ -58,6 +68,18 @@ document.addEventListener('DOMContentLoaded', () => {
     el.dataset.delay = (idx * 0.1).toFixed(1);
     io.observe(el);
   });
+
+  /* ── Toggle frise chronologique ── */
+  const timeline  = document.querySelector('.veille-timeline');
+  const btnToggle = document.getElementById('btn-veille-toggle');
+  if (timeline && btnToggle) {
+    btnToggle.addEventListener('click', () => {
+      const isCollapsed = timeline.classList.toggle('collapsed');
+      btnToggle.textContent = isCollapsed
+        ? 'Dérouler la frise (9 articles) ↓'
+        : 'Réduire la frise ↑';
+    });
+  }
 
   /* ── Formulaire contact (mailto) ── */
   // ⚠️  Remplace TON_EMAIL@exemple.com par ton adresse email réelle
